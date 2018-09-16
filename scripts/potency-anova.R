@@ -19,6 +19,9 @@ lev.rubella.mono.p <- formatPvalue(lev.rubella.mono$`Pr(>F)`[1], digits = format
 welch.aov.measles.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Measles"]) # Measles
 welch.aov.mumps.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Mumps"]) # Mumps
 welch.aov.rubella.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Rubella"]) # Rubella
+welch.aov.measles.mono.p <- formatPvalue(welch.aov.measles.mono$p.value, digits = format_digits)
+welch.aov.mumps.mono.p <- formatPvalue(welch.aov.mumps.mono$p.value, digits = format_digits)
+welch.aov.rubella.mono.p <- formatPvalue(welch.aov.rubella.mono$p.value, digits = format_digits)
 
 # games-howell post-test
 gh.measles.mono <- with(virs.mono[Virus == "Measles"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
