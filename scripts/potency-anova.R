@@ -31,7 +31,11 @@ gh.mumps.mono.p <- pval(gh.mumps.mono$output$dat[, "p"][1])
 gh.rubella.mono.p <- pval(gh.rubella.mono$output$dat[, "p"][1])
 
 # Mean results table
-means.mono <- virs.mono[, .(Mean = mean(Quantity)), by = .(Sample, Virus)][order(Virus)]
+means.mono <- cbind(
+  virs.mono[Virus == "Measles", .("Measles" = mean(Quantity)), by = Sample],
+  virs.mono[Virus == "Mumps", .("Mumps" = mean(Quantity)), by = Sample],
+  virs.mono[Virus == "Rubella", .("Rubella" = mean(Quantity)), by = Sample]
+)
 
 # Biplex ------------------------------------------------------------------
 
