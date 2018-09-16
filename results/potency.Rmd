@@ -17,7 +17,7 @@ library(philsfmisc)
 ```
 
 
-```{r scripts, echo=FALSE}
+```{r scripts, include=FALSE}
 source("scripts/potency-anova.R")
 ```
 
