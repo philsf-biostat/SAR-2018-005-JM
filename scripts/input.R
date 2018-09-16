@@ -16,3 +16,4 @@ mumps.mono$Virus <- "Mumps"
 rubella.mono$Virus <- "Rubella"
 measles.mono$Virus <- "Measles"
 virs.mono <- rbind(mumps.mono, rubella.mono, measles.mono)
+rm(mumps.mono, measles.mono, rubella.mono)
