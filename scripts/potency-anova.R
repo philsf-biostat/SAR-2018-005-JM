@@ -25,9 +25,9 @@ welch.aov.mumps.mono.p <- Hmisc::format.pval(welch.aov.mumps.mono$p.value, digit
 welch.aov.rubella.mono.p <- Hmisc::format.pval(welch.aov.rubella.mono$p.value, digits = format_digits, scientific = FALSE, eps = format_eps)
 
 # games-howell post-test
-gh.measles.mono <- with(virs.mono[Virus == "Measles"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
-gh.mumps.mono <- with(virs.mono[Virus == "Mumps"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
-gh.rubella.mono <- with(virs.mono[Virus == "Rubella"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
+gh.measles.mono <- with(virs.mono[Virus == "Measles"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+gh.mumps.mono <- with(virs.mono[Virus == "Mumps"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
+gh.rubella.mono <- with(virs.mono[Virus == "Rubella"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
 gh.measles.mono.p <- Hmisc::format.pval(gh.measles.mono$output$dat[, "p"][1], digits = format_digits, scientific = FALSE, eps = format_eps)
 gh.mumps.mono.p <- Hmisc::format.pval(gh.mumps.mono$output$dat[, "p"][1], digits = format_digits, scientific = FALSE, eps = format_eps)
 gh.rubella.mono.p <- Hmisc::format.pval(gh.rubella.mono$output$dat[, "p"][1], digits = format_digits, scientific = FALSE, eps = format_eps)
