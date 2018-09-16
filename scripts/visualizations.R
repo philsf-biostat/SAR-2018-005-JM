@@ -9,4 +9,4 @@ ggplot(virs, aes(Sample, Quantity)) +
   ggtitle("Monoplex") +
   # theme(legend.position = "bottom", legend.title = element_blank()) +
   facet_wrap(~ Virus)
-ggsave("figures/potency.png", width = 7, height = 7)
+ggsave("figures/monoplex.png", width = 7, height = 7)
