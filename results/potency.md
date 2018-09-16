@@ -32,7 +32,7 @@ OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
 
 CONFERIR!
 
-![Figure: Potency evaluation of the different vaccine preparations for all three viruses. ](../figures/potency.png)
+![Figure: Potency evaluation of the different vaccine preparations for all three viruses. ](../figures/monoplex.png)
 
 ## Measles
 

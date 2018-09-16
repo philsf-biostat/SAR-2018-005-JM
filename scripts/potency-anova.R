@@ -19,18 +19,6 @@ with(measles, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "g
 with(mumps, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
 with(rubella, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
 
-library(ggplot2)
-ggplot(virs, aes(Sample, Quantity)) +
-  # geom_boxplot() +
-  geom_point(alpha = .25) +
-  xlab("") + ylab("Copies/PCR (log10)") +
-  ylim(c(0,10)) +
-  # ggtitle("Potency") +
-  # theme(legend.position = "bottom", legend.title = element_blank()) +
-  facet_wrap(~ Virus)
-ggsave("figures/potency.png", width = 7, height = 7)
-
-
 # obsolete ----------------------------------------------------------------
 
 # anova.mumps <- aov(data = mumps, Quantity ~ Sample)
