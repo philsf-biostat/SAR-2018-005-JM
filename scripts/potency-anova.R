@@ -1,10 +1,8 @@
 source("scripts/input.R")
+source('scripts/pval.R')
 library(car)
 library(Hmisc)
 library(userfriendlyscience)
-
-format_digits <- 5
-format_eps <- 10^(-format_digits)
 
 # Monoplex ----------------------------------------------------------------
 
@@ -12,25 +10,25 @@ format_eps <- 10^(-format_digits)
 lev.measles.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Measles"]) # Measles
 lev.mumps.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Mumps"]) # Mumps
 lev.rubella.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Rubella"]) # Rubella
-lev.measles.mono.p <- Hmisc::format.pval(lev.measles.mono$`Pr(>F)`[1], digits = format_digits, scientific = FALSE, eps = format_eps)
-lev.mumps.mono.p <- Hmisc::format.pval(lev.mumps.mono$`Pr(>F)`[1], digits = format_digits, scientific = FALSE, eps = format_eps)
-lev.rubella.mono.p <- Hmisc::format.pval(lev.rubella.mono$`Pr(>F)`[1], digits = format_digits, scientific = FALSE, eps = format_eps)
+lev.measles.mono.p <- pval(lev.measles.mono$`Pr(>F)`[1])
+lev.mumps.mono.p <- pval(lev.mumps.mono$`Pr(>F)`[1])
+lev.rubella.mono.p <- pval(lev.rubella.mono$`Pr(>F)`[1])
 
 # Welch ANOVA
 welch.aov.measles.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Measles"]) # Measles
 welch.aov.mumps.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Mumps"]) # Mumps
 welch.aov.rubella.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Rubella"]) # Rubella
-welch.aov.measles.mono.p <- Hmisc::format.pval(welch.aov.measles.mono$p.value, digits = format_digits, scientific = FALSE, eps = format_eps)
-welch.aov.mumps.mono.p <- Hmisc::format.pval(welch.aov.mumps.mono$p.value, digits = format_digits, scientific = FALSE, eps = format_eps)
-welch.aov.rubella.mono.p <- Hmisc::format.pval(welch.aov.rubella.mono$p.value, digits = format_digits, scientific = FALSE, eps = format_eps)
+welch.aov.measles.mono.p <- pval(welch.aov.measles.mono$p.value)
+welch.aov.mumps.mono.p <- pval(welch.aov.mumps.mono$p.value)
+welch.aov.rubella.mono.p <- pval(welch.aov.rubella.mono$p.value)
 
 # games-howell post-test
 gh.measles.mono <- with(virs.mono[Virus == "Measles"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
 gh.mumps.mono <- with(virs.mono[Virus == "Mumps"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
 gh.rubella.mono <- with(virs.mono[Virus == "Rubella"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
-gh.measles.mono.p <- Hmisc::format.pval(gh.measles.mono$output$dat[, "p"][1], digits = format_digits, scientific = FALSE, eps = format_eps)
-gh.mumps.mono.p <- Hmisc::format.pval(gh.mumps.mono$output$dat[, "p"][1], digits = format_digits, scientific = FALSE, eps = format_eps)
-gh.rubella.mono.p <- Hmisc::format.pval(gh.rubella.mono$output$dat[, "p"][1], digits = format_digits, scientific = FALSE, eps = format_eps)
+gh.measles.mono.p <- pval(gh.measles.mono$output$dat[, "p"][1])
+gh.mumps.mono.p <- pval(gh.mumps.mono$output$dat[, "p"][1])
+gh.rubella.mono.p <- pval(gh.rubella.mono$output$dat[, "p"][1])
 
 # Biplex ------------------------------------------------------------------
 
