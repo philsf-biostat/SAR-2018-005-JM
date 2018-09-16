@@ -1,17 +1,58 @@
 ---
 title: "Analysis of vaccine potency"
+author: '**De:** Felipe Figueiredo **Para:** ___'
+date: '**Data: ** dd/mm/aaaa'
 output:
   html_document:
+    fig_caption: yes
+    fig_height: 6
+    fig_width: 6
     keep_md: yes
     number_sections: yes
     toc: yes
-  html_notebook:
+  pdf_document:
     number_sections: yes
     toc: yes
+  word_document:
+    fig_caption: yes
+    fig_height: 6
+    fig_width: 6
+    reference_docx: misc/style.docx
+    toc: yes
+subtitle: 'CÓDIGO: analise_dados_JM_2018a-v01'
+toc-title: "Sumário"
 ---
 
 
 
+---
+
+**Histórico do documento**
+
+
+Versão   Alterações     
+-------  ---------------
+01       Versão inicial 
+
+---
+
+# Assinaturas
+
+
+Papel             Nome                Função          Assinatura                   Data          
+----------------  ------------------  --------------  ---------------------------  --------------
+Elaborador        Felipe Figueiredo   Bioestatítico   __________________________   _____________ 
+Revisado por                                          __________________________   _____________ 
+Verificado por                                        __________________________   _____________ 
+Aprovação final                                       __________________________   _____________ 
+
+<!-- # Lista de abreviaturas -->
+
+# Introduction
+
+<!-- ## Objetivos -->
+
+<!-- ## Recepção e tratamento dos dados -->
 
 
 
@@ -51,3 +92,12 @@ When comparing the two tested vaccine groups, there is also a significant differ
 There were significant differences between the vaccine groups considered (Welch ANOVA, p = 0.00003).
 We observed an average decrease of 1.3083 copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine (Games-Howell test, p = 0.00002), and an average decrease of 1.0209 copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine (Games-Howell test, p = 0.00035).
 When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference (Games-Howell test, p = 0.06272).
+
+<!-- # Exceções e Desvios do teste -->
+
+# Conclusions
+
+# References
+
+<!-- # Apêndice -->
+
