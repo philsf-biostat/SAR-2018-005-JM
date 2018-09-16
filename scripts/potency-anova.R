@@ -1,5 +1,8 @@
 source("scripts/input.R")
 
+format_digits <- 5
+format_eps <- 10^(-format_digits)
+
 # Monoplex ----------------------------------------------------------------
 
 # Levene
@@ -7,6 +10,9 @@ library(car)
 lev.measles.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Measles"]) # Measles
 lev.mumps.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Mumps"]) # Mumps
 lev.rubella.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Rubella"]) # Rubella
+lev.measles.mono.p <- format.pval(lev.measles.mono$`Pr(>F)`[1], scientific = FALSE, eps = format_eps, digits = format_digits)
+lev.mumps.mono.p <- format.pval(lev.mumps.mono$`Pr(>F)`[1], scientific = FALSE, eps = format_eps, digits = format_digits)
+lev.rubella.mono.p <- format.pval(lev.rubella.mono$`Pr(>F)`[1], scientific = FALSE, eps = format_eps, digits = format_digits)
 
 # Welch ANOVA
 welch.aov.measles.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Measles"]) # Measles
