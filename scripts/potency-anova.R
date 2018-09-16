@@ -1,4 +1,6 @@
 source("scripts/input.R")
+library(car)
+library(userfriendlyscience)
 
 format_digits <- 5
 format_eps <- 10^(-format_digits)
@@ -6,13 +8,12 @@ format_eps <- 10^(-format_digits)
 # Monoplex ----------------------------------------------------------------
 
 # Levene
-library(car)
 lev.measles.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Measles"]) # Measles
 lev.mumps.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Mumps"]) # Mumps
 lev.rubella.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Rubella"]) # Rubella
-lev.measles.mono.p <- format.pval(lev.measles.mono$`Pr(>F)`[1], scientific = FALSE, eps = format_eps, digits = format_digits)
-lev.mumps.mono.p <- format.pval(lev.mumps.mono$`Pr(>F)`[1], scientific = FALSE, eps = format_eps, digits = format_digits)
-lev.rubella.mono.p <- format.pval(lev.rubella.mono$`Pr(>F)`[1], scientific = FALSE, eps = format_eps, digits = format_digits)
+lev.measles.mono.p <- formatPvalue(lev.measles.mono$`Pr(>F)`[1], digits = format_digits)
+lev.mumps.mono.p <- formatPvalue(lev.mumps.mono$`Pr(>F)`[1], digits = format_digits)
+lev.rubella.mono.p <- formatPvalue(lev.rubella.mono$`Pr(>F)`[1], digits = format_digits)
 
 # Welch ANOVA
 welch.aov.measles.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Measles"]) # Measles
@@ -20,7 +21,6 @@ welch.aov.mumps.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = vir
 welch.aov.rubella.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Rubella"]) # Rubella
 
 # games-howell post-test
-library(userfriendlyscience)
 gh.measles.mono <- with(virs.mono[Virus == "Measles"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
 gh.mumps.mono <- with(virs.mono[Virus == "Mumps"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
 gh.rubella.mono <- with(virs.mono[Virus == "Rubella"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
