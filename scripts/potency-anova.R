@@ -37,6 +37,14 @@ means.mono <- cbind(
   virs.mono[Virus == "Rubella", .("Rubella" = mean(Quantity)), by = Sample]
 )
 
+# Final results table - creation
+results_table <- data.table(
+  "qPCR Mixture" = rep(NA, 3),
+  "Virus Target" = rep(NA, 3),
+  "Monovalent Bulk" = rep(NA, 3),
+  "Final Vaccine Bulk" = rep(NA, 3),
+  "Final Vaccine Batch" = rep(NA, 3)
+  )
 # Biplex ------------------------------------------------------------------
 
 
