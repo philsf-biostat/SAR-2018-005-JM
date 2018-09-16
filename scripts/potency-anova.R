@@ -37,10 +37,10 @@ gh.rubella.mono.p <- Hmisc::format.pval(gh.rubella.mono$output$dat[, "p"][1], di
 
 # obsolete ----------------------------------------------------------------
 
-# anova.mumps <- aov(data = mumps, Quantity ~ Sample)
-# anova.rubella <- aov(data = rubella, Quantity ~ Sample)
-# anova.measles <- aov(data = measles, Quantity ~ Sample) # violação de normalidade
-# kw.measles <- kruskal.test(data = measles, 10^Quantity ~ factor(Sample))
+# anova.mumps <- aov(data = virs.mono[Virus == "Mumps"], Quantity ~ Sample)
+# anova.rubella <- aov(data = virs.mono[Virus == "Rubella"], Quantity ~ Sample)
+# anova.measles <- aov(data = virs.mono[Virus == "Measles"], Quantity ~ Sample) # violação de normalidade
+# kw.measles <- kruskal.test(data = virs.mono[Virus == "Measles"], 10^Quantity ~ factor(Sample))
 # 
 # # Residuals
 # resid.mumps.p <- format.pval(shapiro.test(resid(anova.mumps))$p.value, digits = 2, eps = .001)
@@ -51,12 +51,12 @@ gh.rubella.mono.p <- Hmisc::format.pval(gh.rubella.mono$output$dat[, "p"][1], di
 # TukeyHSD(anova.rubella)
 # TukeyHSD(anova.measles)
 # 
-# with(mumps, pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
-# with(rubella, pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
-# with(measles, pairwise.wilcox.test(10^Quantity, Sample, p.adjust.method = "bonf"))
+# with(virs.mono[Virus == "Mumps"], pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
+# with(virs.mono[Virus == "Rubella"], pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
+# with(virs.mono[Virus == "Measles"], pairwise.wilcox.test(10^Quantity, Sample, p.adjust.method = "bonf"))
 # 
 # # modelos mistos (failed attempt)
 # library(nlme)
-# lme(Quantity ~ Sample, data = mumps, random = ~1 | Sample)
-# lme(Quantity ~ Sample, data = rubella, random = ~1 | Sample)
-# lme(Quantity ~ Sample, data = measles, random = ~1 | Sample)
+# lme(Quantity ~ Sample, data = virs.mono[Virus == "Mumps"], random = ~1 | Sample)
+# lme(Quantity ~ Sample, data = virs.mono[Virus == "Rubella"], random = ~1 | Sample)
+# lme(Quantity ~ Sample, data = virs.mono[Virus == "Measles"], random = ~1 | Sample)
