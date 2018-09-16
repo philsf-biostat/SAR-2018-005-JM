@@ -47,6 +47,7 @@ results_table <- data.table(
   )
 results_table$`qPCR Mixture` <- rep("Monoplex", 3)
 results_table$`Virus Target` <- names(means.mono)[c(2,4,6)]
+results_table$`Monovalent Bulk` <- unlist(as.vector(means.mono[Sample == "bulk", c(2,4,6)]))
 # Biplex ------------------------------------------------------------------
 
 
