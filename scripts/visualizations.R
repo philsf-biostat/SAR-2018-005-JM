@@ -1,7 +1,7 @@
 source("scripts/input.R")
 
 library(ggplot2)
-fig.monoplex <- ggplot(virs, aes(Sample, Quantity)) +
+fig.monoplex <- ggplot(virs.mono, aes(Sample, Quantity)) +
   # geom_boxplot() +
   geom_point(alpha = .25) +
   xlab("") + ylab("Copies/mL (log10)") +

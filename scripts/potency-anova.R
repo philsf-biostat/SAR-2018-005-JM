@@ -1,30 +1,44 @@
 source("scripts/input.R")
+source('scripts/pval.R')
+library(car)
+library(Hmisc)
+library(userfriendlyscience)
 
-# analysis code -----------------------------------------------------------
+# Monoplex ----------------------------------------------------------------
 
 # Levene
-library(car)
-leveneTest(Quantity ~ Sample, center = mean, data = measles) # Measles
-leveneTest(Quantity ~ Sample, center = mean, data = mumps) # Mumps
-leveneTest(Quantity ~ Sample, center = mean, data = rubella) # Rubella
+lev.measles.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Measles"]) # Measles
+lev.mumps.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Mumps"]) # Mumps
+lev.rubella.mono <- leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Rubella"]) # Rubella
+lev.measles.mono.p <- pval(lev.measles.mono$`Pr(>F)`[1])
+lev.mumps.mono.p <- pval(lev.mumps.mono$`Pr(>F)`[1])
+lev.rubella.mono.p <- pval(lev.rubella.mono$`Pr(>F)`[1])
 
 # Welch ANOVA
-oneway.test(Quantity ~ Sample, var.equal = F, data = measles) # Measles
-oneway.test(Quantity ~ Sample, var.equal = F, data = mumps) # Mumps
-oneway.test(Quantity ~ Sample, var.equal = F, data = rubella) # Rubella
+welch.aov.measles.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Measles"]) # Measles
+welch.aov.mumps.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Mumps"]) # Mumps
+welch.aov.rubella.mono <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Rubella"]) # Rubella
+welch.aov.measles.mono.p <- pval(welch.aov.measles.mono$p.value)
+welch.aov.mumps.mono.p <- pval(welch.aov.mumps.mono$p.value)
+welch.aov.rubella.mono.p <- pval(welch.aov.rubella.mono$p.value)
 
-# UserFriendlyScience
-library(userfriendlyscience)
-with(measles, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
-with(mumps, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
-with(rubella, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
+# games-howell post-test
+gh.measles.mono <- with(virs.mono[Virus == "Measles"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+gh.mumps.mono <- with(virs.mono[Virus == "Mumps"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
+gh.rubella.mono <- with(virs.mono[Virus == "Rubella"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
+gh.measles.mono.p <- pval(gh.measles.mono$output$dat[, "p"][1])
+gh.mumps.mono.p <- pval(gh.mumps.mono$output$dat[, "p"][1])
+gh.rubella.mono.p <- pval(gh.rubella.mono$output$dat[, "p"][1])
+
+# Biplex ------------------------------------------------------------------
+
 
 # obsolete ----------------------------------------------------------------
 
-# anova.mumps <- aov(data = mumps, Quantity ~ Sample)
-# anova.rubella <- aov(data = rubella, Quantity ~ Sample)
-# anova.measles <- aov(data = measles, Quantity ~ Sample) # violação de normalidade
-# kw.measles <- kruskal.test(data = measles, 10^Quantity ~ factor(Sample))
+# anova.mumps <- aov(data = virs.mono[Virus == "Mumps"], Quantity ~ Sample)
+# anova.rubella <- aov(data = virs.mono[Virus == "Rubella"], Quantity ~ Sample)
+# anova.measles <- aov(data = virs.mono[Virus == "Measles"], Quantity ~ Sample) # violação de normalidade
+# kw.measles <- kruskal.test(data = virs.mono[Virus == "Measles"], 10^Quantity ~ factor(Sample))
 # 
 # # Residuals
 # resid.mumps.p <- format.pval(shapiro.test(resid(anova.mumps))$p.value, digits = 2, eps = .001)
@@ -35,12 +49,12 @@ with(rubella, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "g
 # TukeyHSD(anova.rubella)
 # TukeyHSD(anova.measles)
 # 
-# with(mumps, pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
-# with(rubella, pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
-# with(measles, pairwise.wilcox.test(10^Quantity, Sample, p.adjust.method = "bonf"))
+# with(virs.mono[Virus == "Mumps"], pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
+# with(virs.mono[Virus == "Rubella"], pairwise.t.test(Quantity, Sample, p.adjust.method = "bonf"))
+# with(virs.mono[Virus == "Measles"], pairwise.wilcox.test(10^Quantity, Sample, p.adjust.method = "bonf"))
 # 
 # # modelos mistos (failed attempt)
 # library(nlme)
-# lme(Quantity ~ Sample, data = mumps, random = ~1 | Sample)
-# lme(Quantity ~ Sample, data = rubella, random = ~1 | Sample)
-# lme(Quantity ~ Sample, data = measles, random = ~1 | Sample)
+# lme(Quantity ~ Sample, data = virs.mono[Virus == "Mumps"], random = ~1 | Sample)
+# lme(Quantity ~ Sample, data = virs.mono[Virus == "Rubella"], random = ~1 | Sample)
+# lme(Quantity ~ Sample, data = virs.mono[Virus == "Measles"], random = ~1 | Sample)
