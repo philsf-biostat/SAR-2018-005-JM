@@ -1,5 +1,5 @@
 ---
-title: "Análise Estatística de ..."
+title: "Analysis of vaccine potency"
 author: '**De:** Felipe Figueiredo **Para:** ___'
 date: '**Data: ** dd/mm/aaaa'
 output:
@@ -7,6 +7,7 @@ output:
     fig_caption: yes
     fig_height: 6
     fig_width: 6
+    keep_md: yes
     number_sections: yes
     toc: yes
   pdf_document:
@@ -53,7 +54,7 @@ kable(history)
 ```{r, echo=FALSE}
 sig.field <- "__________________________"
 date.field <- "_____________"
-Stat <- c("Elaborador", "Nome", "Função", sig.field, date.field)
+Stat <- c("Elaborador", "Felipe Figueiredo", "Bioestatítico", sig.field, date.field)
 Reviewer <- c("Revisado por", "", "", sig.field, date.field)
 Approver <- c("Verificado por", "", "", sig.field, date.field)
 Final.Approver <- c("Aprovação final", "", "", sig.field, date.field)
