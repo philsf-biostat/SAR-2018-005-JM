@@ -46,6 +46,7 @@ results_table <- data.table(
   "Final Vaccine Batch" = rep(NA, 3)
   )
 results_table$`qPCR Mixture` <- rep("Monoplex", 3)
+results_table$`Virus Target` <- names(means.mono)[c(2,4,6)]
 # Biplex ------------------------------------------------------------------
 
 
