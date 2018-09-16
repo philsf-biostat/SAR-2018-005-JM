@@ -4,20 +4,20 @@ source("scripts/input.R")
 
 # Levene
 library(car)
-leveneTest(Quantity ~ Sample, center = mean, data = measles) # Measles
-leveneTest(Quantity ~ Sample, center = mean, data = mumps) # Mumps
-leveneTest(Quantity ~ Sample, center = mean, data = rubella) # Rubella
+leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Measles"]) # Measles
+leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Mumps"]) # Mumps
+leveneTest(Quantity ~ Sample, center = mean, data = virs.mono[Virus == "Rubella"]) # Rubella
 
 # Welch ANOVA
-oneway.test(Quantity ~ Sample, var.equal = F, data = measles) # Measles
-oneway.test(Quantity ~ Sample, var.equal = F, data = mumps) # Mumps
-oneway.test(Quantity ~ Sample, var.equal = F, data = rubella) # Rubella
+oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Measles"]) # Measles
+oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Mumps"]) # Mumps
+oneway.test(Quantity ~ Sample, var.equal = F, data = virs.mono[Virus == "Rubella"]) # Rubella
 
 # UserFriendlyScience
 library(userfriendlyscience)
-with(measles, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
-with(mumps, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
-with(rubella, oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
+with(virs.mono[Virus == "Measles"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+with(virs.mono[Virus == "Mumps"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
+with(virs.mono[Virus == "Rubella"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
 
 # obsolete ----------------------------------------------------------------
 
