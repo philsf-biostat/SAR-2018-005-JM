@@ -27,6 +27,9 @@ welch.aov.rubella.mono.p <- formatPvalue(welch.aov.rubella.mono$p.value, digits 
 gh.measles.mono <- with(virs.mono[Virus == "Measles"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
 gh.mumps.mono <- with(virs.mono[Virus == "Mumps"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
 gh.rubella.mono <- with(virs.mono[Virus == "Rubella"], oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
+gh.measles.mono.p <- formatPvalue(gh.measles.mono$output$dat[, "p"][1], digits = format_digits)
+gh.mumps.mono.p <- formatPvalue(gh.mumps.mono$output$dat[, "p"][1], digits = format_digits)
+gh.rubella.mono.p <- formatPvalue(gh.rubella.mono$output$dat[, "p"][1], digits = format_digits)
 
 # obsolete ----------------------------------------------------------------
 
