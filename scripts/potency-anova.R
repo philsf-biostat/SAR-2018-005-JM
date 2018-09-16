@@ -45,6 +45,7 @@ results_table <- data.table(
   "Final Vaccine Bulk" = rep(NA, 3),
   "Final Vaccine Batch" = rep(NA, 3)
   )
+results_table$`qPCR Mixture` <- rep("Monoplex", 3)
 # Biplex ------------------------------------------------------------------
 
 
