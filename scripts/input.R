@@ -1,16 +1,16 @@
 library(readxl)
 source("scripts/process.data.R")
 
-cax <- read_excel("dataset/FAST- teste bulk mono x for x liof CAX 19-12_data.xls", 3)
-cax <- process.data(cax)
+mumps <- read_excel("dataset/FAST- teste bulk mono x for x liof CAX 19-12_data.xls", 3)
+mumps <- process.data(mumps)
 
-rub <- read_excel("dataset/FAST- teste bulk mono x for x liof RUB 19-12_data.xls", 3)
-rub <- process.data(rub)
+rubella <- read_excel("dataset/FAST- teste bulk mono x for x liof RUB 19-12_data.xls", 3)
+rubella <- process.data(rubella)
 
-sar <- read_excel("dataset/FAST- teste bulk mono x for x liof SAR 19-12_data.xls", 3)
-sar <- process.data(sar)
+measles <- read_excel("dataset/FAST- teste bulk mono x for x liof SAR 19-12_data.xls", 3)
+measles <- process.data(measles)
 
-cax$Virus <- "Mumps"
-rub$Virus <- "Rubella"
-sar$Virus <- "Measles"
-virs <- rbind(cax, rub, sar)
+mumps$Virus <- "Mumps"
+rubella$Virus <- "Rubella"
+measles$Virus <- "Measles"
+virs <- rbind(mumps, rubella, measles)
