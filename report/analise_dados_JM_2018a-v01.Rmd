@@ -1,19 +1,88 @@
 ---
 title: "Analysis of vaccine potency"
+author: '**De:** Felipe Figueiredo **Para:** ___'
+date: '**Data: ** dd/mm/aaaa'
 output:
   html_document:
+    fig_caption: yes
+    fig_height: 6
+    fig_width: 6
     keep_md: yes
     number_sections: yes
     toc: yes
-  html_notebook:
+  pdf_document:
     number_sections: yes
     toc: yes
+  word_document:
+    fig_caption: yes
+    fig_height: 6
+    fig_width: 6
+    reference_docx: misc/style.docx
+    toc: yes
+subtitle: 'CÓDIGO: analise_dados_JM_2018a-v01'
+toc-title: "Sumário"
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+options(scipen = 999)
+library(pander)
+library(knitr)
+library(philsfmisc)
 
 
+```
 
+---
 
+**Histórico do documento**
+
+```{r, echo = FALSE}
+Version <- c("01")
+Changes <- c("Versão inicial")
+history <- cbind(Version, Changes)
+colnames(history) <- c("Versão", "Alterações")
+# pander(history, split.cells = 70)
+kable(history)
+```
+
+---
+
+# Assinaturas
+
+```{r, echo=FALSE}
+sig.field <- "__________________________"
+date.field <- "_____________"
+Stat <- c("Elaborador", "Felipe Figueiredo", "Bioestatítico", sig.field, date.field)
+Reviewer <- c("Revisado por", "", "", sig.field, date.field)
+Approver <- c("Verificado por", "", "", sig.field, date.field)
+Final.Approver <- c("Aprovação final", "", "", sig.field, date.field)
+
+sigs <- rbind(
+  Stat
+  , Reviewer
+  , Approver
+  , Final.Approver
+  )
+rownames(sigs) <- NULL
+colnames(sigs) <- c("Papel", "Nome", "Função", "Assinatura", "Data")
+
+# pander(sigs, split.cells = c(9, 14, 14, 16, 8), split.table = Inf)
+kable(sigs)
+```
+
+<!-- # Lista de abreviaturas -->
+
+# Introduction
+
+<!-- ## Objetivos -->
+
+<!-- ## Recepção e tratamento dos dados -->
+
+```{r scripts, include=FALSE}
+source("scripts/potency-anova.R")
+```
 
 # Methods
 
@@ -32,7 +101,7 @@ OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
 
 CONFERIR!
 
-![Figure: Potency evaluation of the different vaccine preparations for all three viruses. ](../figures/monoplex.png)
+![**Figure 1**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
 ## Measles
 
@@ -51,3 +120,12 @@ When comparing the two tested vaccine groups, there is also a significant differ
 There were significant differences between the vaccine groups considered (Welch ANOVA, p = 0.00003).
 We observed an average decrease of 1.3083 copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine (Games-Howell test, p = 0.00002), and an average decrease of 1.0209 copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine (Games-Howell test, p = 0.00035).
 When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference (Games-Howell test, p = 0.06272).
+
+<!-- # Exceções e Desvios do teste -->
+
+# Conclusions
+
+# References
+
+<!-- # Apêndice -->
+
