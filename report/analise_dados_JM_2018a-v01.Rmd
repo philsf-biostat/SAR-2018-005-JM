@@ -101,7 +101,7 @@ OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
 
 CONFERIR!
 
-![Figure: Potency evaluation of the different vaccine preparations for all three viruses. ](../figures/monoplex.png)
+![**Figure 1**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
 ## Measles
 
