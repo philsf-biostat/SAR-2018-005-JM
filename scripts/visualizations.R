@@ -4,7 +4,7 @@ library(ggplot2)
 ggplot(virs, aes(Sample, Quantity)) +
   # geom_boxplot() +
   geom_point(alpha = .25) +
-  xlab("") + ylab("Copies/PCR (log10)") +
+  xlab("") + ylab("Copies/mL (log10)") +
   ylim(c(0,10)) +
   ggtitle("Monoplex") +
   # theme(legend.position = "bottom", legend.title = element_blank()) +
