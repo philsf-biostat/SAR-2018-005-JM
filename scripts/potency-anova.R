@@ -41,13 +41,14 @@ means.mono <- cbind(
 results_table <- data.table(
   "qPCR Mixture" = rep(NA, 3),
   "Virus Target" = rep(NA, 3),
-  "Monovalent Bulk" = rep(NA, 3),
-  "Final Vaccine Bulk" = rep(NA, 3),
-  "Final Vaccine Batch" = rep(NA, 3)
+  "Monovalent Bulk" = rep(as.numeric(NA), 3),
+  "Final Vaccine Bulk" = rep(as.numeric(NA), 3),
+  "Final Vaccine Batch" = rep(as.numeric(NA), 3)
   )
 results_table$`qPCR Mixture` <- rep("Monoplex", 3)
 results_table$`Virus Target` <- names(means.mono)[c(2,4,6)]
-results_table$`Monovalent Bulk` <- unlist(as.vector(means.mono[Sample == "bulk", c(2,4,6)]))
+results_table[`Virus Target` == "Measles", 3:5 ] <- as.list(means.mono[, Measles])
+
 # Biplex ------------------------------------------------------------------
 
 
