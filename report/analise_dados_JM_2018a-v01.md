@@ -88,7 +88,7 @@ CONFERIR!
 Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
 method.
 
-![**Figure 1**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
+![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
 ## Measles
 
