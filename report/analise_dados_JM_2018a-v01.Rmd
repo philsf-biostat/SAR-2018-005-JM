@@ -1,5 +1,5 @@
 ---
-title: "Analysis of vaccine potency"
+title: "Analysis of vaccine potency by monoplex and biplex qPRC assay"
 author: '**De:** Felipe Figueiredo **Para:** ___'
 date: '**Data: ** dd/mm/aaaa'
 output:
@@ -53,7 +53,7 @@ pander(history, split.cells = 70)
 ```{r, echo=FALSE}
 sig.field <- "__________________________"
 date.field <- "_____________"
-Stat <- c("Elaborador", "Felipe Figueiredo", "Bioestatítico", sig.field, date.field)
+Stat <- c("Elaborador", "Felipe Figueiredo", "Bioestatístico", sig.field, date.field)
 Reviewer <- c("Revisado por", "", "", sig.field, date.field)
 Approver <- c("Verificado por", "", "", sig.field, date.field)
 Final.Approver <- c("Aprovação final", "", "", sig.field, date.field)
@@ -92,14 +92,6 @@ In the same manner, the Games-Howell post-hoc test was employed to correct for m
 
 # Results
 
-OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
-
-- bulk mono = bulk
-- vacina formulada = final bulk
-- vacina liofilizada = final batch
-
-CONFERIR!
-
 ```{r tabela geral}
 pander(results_table, split.table = Inf, digits = 3)
 ```
@@ -108,27 +100,38 @@ Table: **Table 6** Potency of vaccine presentations quantified by monoplex and m
 method.
 The p-values presented correspond to Welch-ANOVA tests comparing different vaccine formulation stages, per Virus and qPCR mixture.
 
+## Monoplex evaluation
+
 ![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
-![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
-
-## Measles
+**Measles**
 
 There were significant differences between the vaccine groups considered (Welch ANOVA, p < 0.00001).
 We observed an average decrease of 2.0745 copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine (Games-Howell test, p < 0.00001), and an average decrease of 1.8423 copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine (Games-Howell test, p < 0.00001).
 When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference (Games-Howell test, p = 0.09923).
 
-## Mumps
+**Mumps**
 
 There were significant differences between the vaccine groups considered (Welch ANOVA, p < 0.00001).
 We observed an average decrease of 1.2904 copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine (Games-Howell test, p < 0.00001), and an average decrease of 1.4848 copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine (Games-Howell test, p < 0.00001).
 When comparing the two tested vaccine groups, there is also a significant difference (Games-Howell test, p = 0.02198), indicating an average decrease of 0.1945 Copies/PCR (in log10) in the final batch preparation compared to the final bulk preparation.
 
-## Rubella
+**Rubella**
 
 There were significant differences between the vaccine groups considered (Welch ANOVA, p = 0.00003).
 We observed an average decrease of 1.3083 copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine (Games-Howell test, p = 0.00002), and an average decrease of 1.0209 copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine (Games-Howell test, p = 0.00035).
 When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference (Games-Howell test, p = 0.06272).
+
+## Biplex evaluation
+
+![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
+
+**Measles**
+
+**Mumps**
+
+**Rubella**
+
 
 <!-- # Exceções e Desvios do teste -->
 
