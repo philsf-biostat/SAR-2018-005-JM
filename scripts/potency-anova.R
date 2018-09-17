@@ -90,6 +90,13 @@ results_table[`qPCR Mixture` == "Mumps+measles" & `Virus Target` == "Mumps", 3:5
 results_table[`qPCR Mixture` == "Mumps+rubella" & `Virus Target` == "Mumps", 3:5] <- as.list(means.bi[, `MR Mumps`])
 results_table[`qPCR Mixture` == "Mumps+rubella" & `Virus Target` == "Rubella", 3:5] <- as.list(means.bi[, `MR Rubella`])
 
+results_table$p[4:7] <- c(
+  welch.aov.measles.bi.p,
+  welch.aov.mumps.m.bi.p,
+  welch.aov.mumps.r.bi.p,
+  welch.aov.rubella.bi.p
+)
+
 # obsolete ----------------------------------------------------------------
 
 # anova.mumps <- aov(data = virs.mono[Virus == "Mumps"], Quantity ~ Sample)
