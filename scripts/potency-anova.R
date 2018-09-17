@@ -60,13 +60,13 @@ means.bi <- cbind(
   virs.bi[Mixture == "Mumps+rubella" & Virus== "Rubella", .("MR Rubella"=mean(Quantity)), by = Sample]
   )
 
-data.table(
+results_table <- cbind(data.table(
   "qPCR Mixture" = c(rep("Mumps+measles", 2), rep("Mumps+rubella", 2)),
   "Virus Target" = c("Measles", "Mumps", "Mumps", "Rubella"),
   "Monovalent Bulk" = rep(as.numeric(NA), 4),
   "Final Vaccine Bulk" = rep(as.numeric(NA), 4),
   "Final Vaccine Batch" = rep(as.numeric(NA), 4)
-)
+))
 
 # obsolete ----------------------------------------------------------------
 
