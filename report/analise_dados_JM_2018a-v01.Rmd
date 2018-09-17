@@ -106,6 +106,7 @@ pander(results_table, split.table = Inf, digits = 3)
 
 Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
 method.
+The p-values presented correspond to Welch-ANOVA tests comparing different vaccine formulation stages, per Virus and qPCR mixture.
 
 ![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
