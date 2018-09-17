@@ -59,6 +59,16 @@ results_table$p <- c(
 
 # Biplex ------------------------------------------------------------------
 
+# Welch ANOVA
+welch.aov.measles.bi <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.bi[Virus == "Measles" & Mixture == "Mumps+measles"])
+welch.aov.mumps.m.bi <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.bi[Virus == "Mumps" & Mixture == "Mumps+measles"])
+welch.aov.mumps.r.bi <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.bi[Virus == "Mumps" & Mixture == "Mumps+rubella"])
+welch.aov.rubella.bi <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.bi[Virus == "Rubella" & Mixture == "Mumps+rubella"])
+welch.aov.measles.bi.p <- pval(welch.aov.measles.bi$p.value)
+welch.aov.mumps.m.bi.p <- pval(welch.aov.mumps.m.bi$p.value)
+welch.aov.mumps.r.bi.p <- pval(welch.aov.mumps.r.bi$p.value)
+welch.aov.rubella.bi.p <- pval(welch.aov.rubella.bi$p.value)
+
 means.bi <- cbind(
   virs.bi[Mixture == "Mumps+measles" & Virus== "Measles", .("MM Measles"=mean(Quantity)), by = Sample],
   virs.bi[Mixture == "Mumps+measles" & Virus== "Mumps", .("MM Mumps"=mean(Quantity)), by = Sample],
