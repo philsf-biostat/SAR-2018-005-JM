@@ -53,6 +53,12 @@ results_table[`Virus Target` == "Rubella", 3:5 ] <- as.list(means.mono[, Rubella
 
 # Biplex ------------------------------------------------------------------
 
+means.bi <- cbind(
+  virs.bi[Mixture == "Mumps+measles" & Virus== "Measles", .("MM Measles"=mean(Quantity)), by = Sample],
+  virs.bi[Mixture == "Mumps+measles" & Virus== "Mumps", .("MM Mumps"=mean(Quantity)), by = Sample],
+  virs.bi[Mixture == "Mumps+rubella" & Virus== "Mumps", .("MR Mumps"=mean(Quantity)), by = Sample],
+  virs.bi[Mixture == "Mumps+rubella" & Virus== "Rubella", .("MR Rubella"=mean(Quantity)), by = Sample]
+  )
 
 # obsolete ----------------------------------------------------------------
 
