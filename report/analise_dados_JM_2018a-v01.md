@@ -90,6 +90,8 @@ The p-values presented correspond to Welch-ANOVA tests comparing different vacci
 
 ![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
+![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
+
 ## Measles
 
 There were significant differences between the vaccine groups considered (Welch ANOVA, p < 0.00001).
