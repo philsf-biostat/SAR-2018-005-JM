@@ -30,6 +30,27 @@ gh.measles.mono.p <- pval(gh.measles.mono$output$dat[, "p"][1])
 gh.mumps.mono.p <- pval(gh.mumps.mono$output$dat[, "p"][1])
 gh.rubella.mono.p <- pval(gh.rubella.mono$output$dat[, "p"][1])
 
+# Mean results table
+means.mono <- cbind(
+  virs.mono[Virus == "Measles", .("Measles" = mean(Quantity)), by = Sample],
+  virs.mono[Virus == "Mumps", .("Mumps" = mean(Quantity)), by = Sample],
+  virs.mono[Virus == "Rubella", .("Rubella" = mean(Quantity)), by = Sample]
+)
+
+# Final results table - creation
+results_table <- data.table(
+  "qPCR Mixture" = rep(NA, 3),
+  "Virus Target" = rep(NA, 3),
+  "Monovalent Bulk" = rep(as.numeric(NA), 3),
+  "Final Vaccine Bulk" = rep(as.numeric(NA), 3),
+  "Final Vaccine Batch" = rep(as.numeric(NA), 3)
+  )
+results_table$`qPCR Mixture` <- rep("Monoplex", 3)
+results_table$`Virus Target` <- names(means.mono)[c(2,4,6)]
+results_table[`Virus Target` == "Measles", 3:5 ] <- as.list(means.mono[, Measles])
+results_table[`Virus Target` == "Mumps", 3:5 ] <- as.list(means.mono[, Mumps])
+results_table[`Virus Target` == "Rubella", 3:5 ] <- as.list(means.mono[, Rubella])
+
 # Biplex ------------------------------------------------------------------
 
 

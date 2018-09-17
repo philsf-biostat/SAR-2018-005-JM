@@ -30,8 +30,7 @@ options(scipen = 999)
 library(pander)
 library(knitr)
 library(philsfmisc)
-
-
+panderOptions('table.style', 'rmarkdown')
 ```
 
 ---
@@ -43,8 +42,8 @@ Version <- c("01")
 Changes <- c("Versão inicial")
 history <- cbind(Version, Changes)
 colnames(history) <- c("Versão", "Alterações")
-# pander(history, split.cells = 70)
-kable(history)
+pander(history, split.cells = 70)
+# kable(history)
 ```
 
 ---
@@ -68,8 +67,8 @@ sigs <- rbind(
 rownames(sigs) <- NULL
 colnames(sigs) <- c("Papel", "Nome", "Função", "Assinatura", "Data")
 
-# pander(sigs, split.cells = c(9, 14, 14, 16, 8), split.table = Inf)
-kable(sigs)
+pander(sigs, split.cells = c(9, 14, 14, 16, 8), split.table = Inf)
+# kable(sigs)
 ```
 
 <!-- # Lista de abreviaturas -->
@@ -101,7 +100,14 @@ OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
 
 CONFERIR!
 
-![**Figure 1**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
+```{r tabela geral}
+pander(results_table, split.table = Inf, digits = 3)
+```
+
+Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
+method.
+
+![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
 ## Measles
 

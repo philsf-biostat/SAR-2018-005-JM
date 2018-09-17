@@ -30,21 +30,21 @@ toc-title: "Sumário"
 **Histórico do documento**
 
 
-Versão   Alterações     
--------  ---------------
-01       Versão inicial 
+| Versão |   Alterações   |
+|:------:|:--------------:|
+|   01   | Versão inicial |
 
 ---
 
 # Assinaturas
 
 
-Papel             Nome                Função          Assinatura                   Data          
-----------------  ------------------  --------------  ---------------------------  --------------
-Elaborador        Felipe Figueiredo   Bioestatítico   __________________________   _____________ 
-Revisado por                                          __________________________   _____________ 
-Verificado por                                        __________________________   _____________ 
-Aprovação final                                       __________________________   _____________ 
+|      Papel      |       Nome        |    Função     |         Assinatura         |     Data      |
+|:---------------:|:-----------------:|:-------------:|:--------------------------:|:-------------:|
+|   Elaborador    | Felipe Figueiredo | Bioestatítico | __________________________ | _____________ |
+|  Revisado por   |                   |               | __________________________ | _____________ |
+| Verificado por  |                   |               | __________________________ | _____________ |
+| Aprovação final |                   |               | __________________________ | _____________ |
 
 <!-- # Lista de abreviaturas -->
 
@@ -73,7 +73,17 @@ OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
 
 CONFERIR!
 
-![**Figure 1**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
+
+| qPCR Mixture | Virus Target | Monovalent Bulk | Final Vaccine Bulk | Final Vaccine Batch |
+|:------------:|:------------:|:---------------:|:------------------:|:-------------------:|
+|   Monoplex   |   Measles    |      8.81       |        6.73        |        6.97         |
+|   Monoplex   |    Mumps     |      9.24       |        7.95        |        7.75         |
+|   Monoplex   |   Rubella    |      5.38       |        4.08        |        4.36         |
+
+Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
+method.
+
+![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
 ## Measles
 
