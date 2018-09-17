@@ -38,3 +38,6 @@ measles.bi$Mixture <- "Mumps+measles"
 measles.bi$Virus <- "Measles"
 rubella.bi$Mixture <- "Mumps+rubella"
 rubella.bi$Virus <- "Rubella"
+
+virs.bi <- rbind(mumps.m.bi, mumps.r.bi, measles.bi, rubella.bi)
+rm(mumps.m.bi, mumps.r.bi, measles.bi, rubella.bi)
