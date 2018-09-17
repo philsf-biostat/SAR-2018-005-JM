@@ -73,6 +73,21 @@ OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
 
 CONFERIR!
 
+
+--------------------------------------------------------------------------
+ qPCR Mixture   Virus Target   Monovalent   Final Vaccine   Final Vaccine 
+                                  Bulk          Bulk            Batch     
+-------------- -------------- ------------ --------------- ---------------
+   Monoplex       Measles         8.81          6.73            6.97      
+
+   Monoplex        Mumps          9.24          7.95            7.75      
+
+   Monoplex       Rubella         5.38          4.08            4.36      
+--------------------------------------------------------------------------
+
+Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
+method.
+
 ![**Figure 1**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
 ## Measles
