@@ -22,5 +22,8 @@ rm(mumps.mono, measles.mono, rubella.mono)
 # Biplex ------------------------------------------------------------------
 
 mumps.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Cax")
+mumps.bi <- process.data(mumps.bi)
 measles.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Sar")
+measles.bi$Sample <- process.data(measles.bi)
 rubella.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Rub")
+rubella.bi$Sample <- process.data(rubella.bi)
