@@ -48,6 +48,8 @@ results_table <- data.table(
 results_table$`qPCR Mixture` <- rep("Monoplex", 3)
 results_table$`Virus Target` <- names(means.mono)[c(2,4,6)]
 results_table[`Virus Target` == "Measles", 3:5 ] <- as.list(means.mono[, Measles])
+results_table[`Virus Target` == "Mumps", 3:5 ] <- as.list(means.mono[, Mumps])
+results_table[`Virus Target` == "Rubella", 3:5 ] <- as.list(means.mono[, Rubella])
 
 # Biplex ------------------------------------------------------------------
 
