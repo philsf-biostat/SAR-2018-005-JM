@@ -74,15 +74,15 @@ OBSERVAÇÃO: TRADUÇÕES UTILIZADAS
 CONFERIR!
 
 
-| qPCR Mixture  | Virus Target | Monovalent Bulk | Final Vaccine Bulk | Final Vaccine Batch |
-|:-------------:|:------------:|:---------------:|:------------------:|:-------------------:|
-|   Monoplex    |   Measles    |      8.81       |        6.73        |        6.97         |
-|   Monoplex    |    Mumps     |      9.24       |        7.95        |        7.75         |
-|   Monoplex    |   Rubella    |      5.38       |        4.08        |        4.36         |
-| Mumps+measles |   Measles    |      8.37       |        6.56        |        6.75         |
-| Mumps+measles |    Mumps     |      9.12       |        8.06        |        7.93         |
-| Mumps+rubella |    Mumps     |      9.12       |        7.86        |        7.62         |
-| Mumps+rubella |   Rubella    |      6.06       |        4.58        |        4.71         |
+| qPCR Mixture  | Virus Target | Monovalent Bulk | Final Vaccine Bulk | Final Vaccine Batch |     p     |
+|:-------------:|:------------:|:---------------:|:------------------:|:-------------------:|:---------:|
+|   Monoplex    |   Measles    |      8.81       |        6.73        |        6.97         | < 0.00001 |
+|   Monoplex    |    Mumps     |      9.24       |        7.95        |        7.75         | < 0.00001 |
+|   Monoplex    |   Rubella    |      5.38       |        4.08        |        4.36         |  0.00003  |
+| Mumps+measles |   Measles    |      8.37       |        6.56        |        6.75         |    NA     |
+| Mumps+measles |    Mumps     |      9.12       |        8.06        |        7.93         |    NA     |
+| Mumps+rubella |    Mumps     |      9.12       |        7.86        |        7.62         |    NA     |
+| Mumps+rubella |   Rubella    |      6.06       |        4.58        |        4.71         |    NA     |
 
 Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
 method.
