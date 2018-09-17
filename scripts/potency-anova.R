@@ -51,6 +51,12 @@ results_table[`Virus Target` == "Measles", 3:5 ] <- as.list(means.mono[, Measles
 results_table[`Virus Target` == "Mumps", 3:5 ] <- as.list(means.mono[, Mumps])
 results_table[`Virus Target` == "Rubella", 3:5 ] <- as.list(means.mono[, Rubella])
 
+results_table$p <- c(
+  welch.aov.measles.mono.p,
+  welch.aov.mumps.mono.p,
+  welch.aov.rubella.mono.p
+  )
+
 # Biplex ------------------------------------------------------------------
 
 means.bi <- cbind(
@@ -65,7 +71,8 @@ results_table <- rbind(results_table, data.table(
   "Virus Target" = c("Measles", "Mumps", "Mumps", "Rubella"),
   "Monovalent Bulk" = rep(as.numeric(NA), 4),
   "Final Vaccine Bulk" = rep(as.numeric(NA), 4),
-  "Final Vaccine Batch" = rep(as.numeric(NA), 4)
+  "Final Vaccine Batch" = rep(as.numeric(NA), 4),
+  "p" = rep(as.numeric(NA), 4)
 ))
 
 results_table[`qPCR Mixture` == "Mumps+measles" & `Virus Target` == "Measles", 3:5] <- as.list(means.bi[, `MM Measles`])
