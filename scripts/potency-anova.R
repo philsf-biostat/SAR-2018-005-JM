@@ -68,6 +68,11 @@ results_table <- cbind(data.table(
   "Final Vaccine Batch" = rep(as.numeric(NA), 4)
 ))
 
+results_table[`qPCR Mixture` == "Mumps+measles" & `Virus Target` == "Measles", 3:5] <- as.list(virs.bi[Mixture == "Mumps+measles" & Virus== "Measles", .(M=mean(Quantity)), by = Sample]$M)
+results_table[`qPCR Mixture` == "Mumps+measles" & `Virus Target` == "Mumps", 3:5] <- as.list(virs.bi[Mixture == "Mumps+measles" & Virus== "Mumps", .(M=mean(Quantity)), by = Sample]$M)
+results_table[`qPCR Mixture` == "Mumps+rubella" & `Virus Target` == "Mumps", 3:5] <- as.list(virs.bi[Mixture == "Mumps+rubella" & Virus== "Mumps", .(M=mean(Quantity)), by = Sample]$M)
+results_table[`qPCR Mixture` == "Mumps+rubella" & `Virus Target` == "Rubella", 3:5] <- as.list(virs.bi[Mixture == "Mumps+rubella" & Virus== "Rubella", .(M=mean(Quantity)), by = Sample]$M)
+
 # obsolete ----------------------------------------------------------------
 
 # anova.mumps <- aov(data = virs.mono[Virus == "Mumps"], Quantity ~ Sample)
