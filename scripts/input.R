@@ -18,3 +18,9 @@ measles.mono$Virus <- "Measles"
 virs.mono <- rbind(mumps.mono, rubella.mono, measles.mono)
 virs.mono <- virs.mono[, .(Virus, Sample, Quantity)]
 rm(mumps.mono, measles.mono, rubella.mono)
+
+# Biplex ------------------------------------------------------------------
+
+mumps.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Cax")
+measles.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Sar")
+rubella.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Rub")
