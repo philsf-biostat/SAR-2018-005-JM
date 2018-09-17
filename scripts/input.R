@@ -29,3 +29,12 @@ measles.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Mumps+measles-mea
 measles.bi <- process.data(measles.bi)
 rubella.bi <- read_excel("dataset/biplex-assay.xlsx", sheet = "Mumps+rubella-rubella")
 rubella.bi <- process.data(rubella.bi)
+
+mumps.m.bi$Mixture <- "Mumps+measles"
+mumps.m.bi$Virus <- "Mumps"
+mumps.r.bi$Mixture <- "Mumps+rubella"
+mumps.r.bi$Virus <- "Mumps"
+measles.bi$Mixture <- "Mumps+measles"
+measles.bi$Virus <- "Measles"
+rubella.bi$Mixture <- "Mumps+rubella"
+rubella.bi$Virus <- "Rubella"
