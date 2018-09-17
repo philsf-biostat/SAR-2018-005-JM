@@ -19,3 +19,4 @@ fig.biplex <- ggplot(virs.bi, aes(Sample, Quantity)) +
   ggtitle("Biplex") +
   # theme(legend.position = "bottom", legend.title = element_blank()) +
   facet_wrap( ~ Virus + Mixture, nrow = 1)
+ggsave("figures/biplex.png", width = 7, height = 7)
