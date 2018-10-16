@@ -1,6 +1,6 @@
 ---
 title: "Analysis of vaccine potency by monoplex and biplex qPRC assay"
-author: '**De:** Felipe Figueiredo **Para:** ___'
+author: '**De:** Felipe Figueiredo **Para:** Gisela Trindade'
 date: '**Data: ** dd/mm/aaaa'
 output:
   html_document:
@@ -19,7 +19,7 @@ output:
     fig_width: 6
     reference_docx: misc/style.docx
     toc: yes
-subtitle: 'CÓDIGO: analise_dados_JM_2018a-v01'
+subtitle: 'RELATÓRIO: analise_dados_JM_2018a-v01'
 toc-title: "Sumário"
 ---
 
@@ -36,7 +36,7 @@ toc-title: "Sumário"
 
 ---
 
-# Assinaturas
+<!-- # Assinaturas -->
 
 
 |      Papel      |       Nome        |     Função     |         Assinatura         |     Data      |
