@@ -107,7 +107,7 @@ Table: **Table 6** Potency of vaccine presentations quantified by monoplex and m
 method.
 The p-values presented correspond to Welch-ANOVA tests comparing different vaccine formulation stages, per Virus and qPCR mixture.
 
-## Monoplex evaluation
+## Evaluation of monoplex and biplex assays
 
 ![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
@@ -158,8 +158,6 @@ copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine
 (Games-Howell test, p = 0.00035).
 When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference
 (Games-Howell test, p = 0.06272).
-
-## Biplex evaluation
 
 ![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
 
