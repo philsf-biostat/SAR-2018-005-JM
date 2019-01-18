@@ -94,6 +94,9 @@ In the same manner, the Games-Howell post-hoc test was employed to correct for m
 
 **Biplex evaluation**
 
+For the biplex samples, the Levene test did now show evidence of homogeneity of variances for either Measles (p = `r lev.measles.bi.p`), Mumps (p = `r lev.mumps.bi.p`) or Rubella (p = `r lev.rubella.bi.p`).
+For simplicity sake these data were analyzed with the same methodology as the monoplex samples (Welch ANOVA and Games-Howell post-test).
+
 **Monoplex x Biplex comparison**
 
 # Results
