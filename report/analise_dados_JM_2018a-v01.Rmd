@@ -149,6 +149,8 @@ Mean titer was also not different in both mixtures (p = `r gh.mumps.m.bi.p[3]` f
 
 **Rubella**
 
+Rubella was tested in a mixture with Mumps, where there was significant titer drops frin the bulk to the two other formulations (p = `r gh.rubella.bi.p[1]` and p = `r gh.rubella.bi.p[2]`, respectively).
+No significant difference was detected between the final bulk and final batch formulations (p = `r gh.rubella.bi.p[3]`).
 
 <!-- # Exceções e Desvios do teste -->
 
