@@ -26,9 +26,9 @@ welch.aov.rubella.mono.p <- pval(welch.aov.rubella.mono$p.value)
 gh.measles.mono <- with(virs.mono[Virus == "Measles"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
 gh.mumps.mono <- with(virs.mono[Virus == "Mumps"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Mumps
 gh.rubella.mono <- with(virs.mono[Virus == "Rubella"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Rubella
-gh.measles.mono.p <- pval(gh.measles.mono$output$dat[, "p"][1])
-gh.mumps.mono.p <- pval(gh.mumps.mono$output$dat[, "p"][1])
-gh.rubella.mono.p <- pval(gh.rubella.mono$output$dat[, "p"][1])
+gh.measles.mono.p <- pval(gh.measles.mono$intermediate$posthoc[, "p"])
+gh.mumps.mono.p <- pval(gh.mumps.mono$intermediate$posthoc[, "p"])
+gh.rubella.mono.p <- pval(gh.rubella.mono$intermediate$posthoc[, "p"])
 
 # Mean results table
 means.mono <- cbind(
