@@ -115,9 +115,18 @@ The p-values presented correspond to Welch-ANOVA tests comparing different vacci
 
 **Measles**
 
-There were significant differences between the vaccine groups considered (Welch ANOVA, p < 0.00001).
-We observed an average decrease of 2.0745 copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine (Games-Howell test, p < 0.00001), and an average decrease of 1.8423 copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine (Games-Howell test, p < 0.00001).
-When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference (Games-Howell test, p = 0.09923).
+There were significant differences between the vaccine groups considered
+(Welch ANOVA, p = `r welch.aov.measles.mono.p`).
+We observed an average decrease of
+`r abs(gh.measles.mono$intermediate$posthoc["final bulk-bulk", 1])`
+copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine
+(Games-Howell test, p `r gh.measles.mono.p[1]`),
+and an average decrease of
+`r abs(gh.measles.mono$intermediate$posthoc["final batch-bulk", 1])`
+copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine
+(Games-Howell test, p `r gh.measles.mono.p[2]`).
+When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference
+(Games-Howell test, p = `r gh.measles.mono.p[3]`).
 
 **Mumps**
 
