@@ -135,12 +135,22 @@ When comparing the two tested vaccine groups (final bulk and final batch), there
 
 ![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
 
+As expected a major drop was observed with the three vaccine virus strains, between the three formulations (p = `r welch.aov.measles.bi.p`, p = `r welch.aov.measles.bi.p` and p = `r welch.aov.rubella.bi.p` for Measles, Mumps and Rubella, respectively).
+
 **Measles**
+
+The Measles sample had significant titer drops from the bulk to both final bulk and final batch formulations (Games-Howell test p = `r gh.measles.bi.p[1]` and p = `r gh.measles.bi.p[2]`, respectively).
+When testing for differences final bulk and final batch, we found no significant difference in titers (p = `r gh.measles.bi.p[3]`).
 
 **Mumps**
 
+In both Mumps mixtures tested (mixed with Measles and with Rubella), there were significant drops in viral titer from the bulk to other formulations (p = `r gh.mumps.m.bi.p[1]` and p = `r gh.mumps.m.bi.p[2]` for Measles, and p = `r gh.mumps.r.bi.p[1]` and p = `r gh.mumps.r.bi.p[2]` for Rubella).
+Mean titer was also not different in both mixtures (p = `r gh.mumps.m.bi.p[3]` for Measles mixture and p = `r gh.mumps.r.bi.p[3]` for Rubella mixture).
+
 **Rubella**
 
+Rubella was tested in a mixture with Mumps, where there was significant titer drops frin the bulk to the two other formulations (p = `r gh.rubella.bi.p[1]` and p = `r gh.rubella.bi.p[2]`, respectively).
+No significant difference was detected between the final bulk and final batch formulations (p = `r gh.rubella.bi.p[3]`).
 
 <!-- # Exceções e Desvios do teste -->
 
