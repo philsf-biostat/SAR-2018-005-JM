@@ -59,6 +59,14 @@ results_table$p <- c(
 
 # Biplex ------------------------------------------------------------------
 
+# Levene
+lev.measles.bi <- leveneTest(Quantity ~ Sample, center = mean, data = virs.bi[Virus == "Measles"]) # Measles
+lev.mumps.bi <- leveneTest(Quantity ~ Sample, center = mean, data = virs.bi[Virus == "Mumps"]) # Mumps
+lev.rubella.bi <- leveneTest(Quantity ~ Sample, center = mean, data = virs.bi[Virus == "Rubella"]) # Rubella
+lev.measles.bi.p <- pval(lev.measles.bi$`Pr(>F)`[1])
+lev.mumps.bi.p <- pval(lev.mumps.bi$`Pr(>F)`[1])
+lev.rubella.bi.p <- pval(lev.rubella.bi$`Pr(>F)`[1])
+
 # Welch ANOVA
 welch.aov.measles.bi <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.bi[Virus == "Measles" & Mixture == "Mumps+measles"])
 welch.aov.mumps.m.bi <- oneway.test(Quantity ~ Sample, var.equal = F, data = virs.bi[Virus == "Mumps" & Mixture == "Mumps+measles"])
