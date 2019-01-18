@@ -144,6 +144,9 @@ When testing for differences final bulk and final batch, we found no significant
 
 **Mumps**
 
+In both Mumps mixtures tested (mixed with Measles and with Rubella), there were significant drops in viral titer from the bulk to other formulations (p = `r gh.mumps.m.bi.p[1]` and p = `r gh.mumps.m.bi.p[2]` for Measles, and p = `r gh.mumps.r.bi.p[1]` and p = `r gh.mumps.r.bi.p[2]` for Rubella).
+Mean titer was also not different in both mixtures (p = `r gh.mumps.m.bi.p[3]` for Measles mixture and p = `r gh.mumps.r.bi.p[3]` for Rubella mixture).
+
 **Rubella**
 
 
