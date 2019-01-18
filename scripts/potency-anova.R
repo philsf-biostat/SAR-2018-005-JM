@@ -77,6 +77,16 @@ welch.aov.mumps.m.bi.p <- pval(welch.aov.mumps.m.bi$p.value)
 welch.aov.mumps.r.bi.p <- pval(welch.aov.mumps.r.bi$p.value)
 welch.aov.rubella.bi.p <- pval(welch.aov.rubella.bi$p.value)
 
+# games-howell post-test
+gh.measles.bi <- with(virs.bi[Virus == "Measles" & Mixture == "Mumps+measles"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4))
+gh.mumps.m.bi <- with(virs.bi[Virus == "Mumps" & Mixture == "Mumps+measles"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4))
+gh.mumps.r.bi <- with(virs.bi[Virus == "Mumps" & Mixture == "Mumps+rubella"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4))
+gh.rubella.bi <- with(virs.bi[Virus == "Rubella" & Mixture == "Mumps+rubella"], userfriendlyscience::oneway(Quantity, Sample, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4))
+gh.measles.bi.p <- pval(gh.measles.bi$intermediate$posthoc[, "p"])
+gh.mumps.m.bi.p <- pval(gh.mumps.m.bi$intermediate$posthoc[, "p"])
+gh.mumps.r.bi.p <- pval(gh.mumps.r.bi$intermediate$posthoc[, "p"])
+gh.rubella.bi.p <- pval(gh.rubella.bi$intermediate$posthoc[, "p"])
+
 means.bi <- cbind(
   virs.bi[Mixture == "Mumps+measles" & Virus== "Measles", .("MM Measles"=mean(Quantity)), by = Sample],
   virs.bi[Mixture == "Mumps+measles" & Virus== "Mumps", .("MM Mumps"=mean(Quantity)), by = Sample],
