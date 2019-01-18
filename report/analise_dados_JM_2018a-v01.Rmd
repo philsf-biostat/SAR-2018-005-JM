@@ -139,6 +139,9 @@ As expected a major drop was observed with the three vaccine virus strains, betw
 
 **Measles**
 
+The Measles sample had significant titer drops from the bulk to both final bulk and final batch formulations (Games-Howell test p = `r gh.measles.bi.p[1]` and p = `r gh.measles.bi.p[2]`, respectively).
+When testing for differences final bulk and final batch, we found no significant difference in titers (p = `r gh.measles.bi.p[3]`).
+
 **Mumps**
 
 **Rubella**
