@@ -135,6 +135,8 @@ When comparing the two tested vaccine groups (final bulk and final batch), there
 
 ![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
 
+As expected a major drop was observed with the three vaccine virus strains, between the three formulations (p = `r welch.aov.measles.bi.p`, p = `r welch.aov.measles.bi.p` and p = `r welch.aov.rubella.bi.p` for Measles, Mumps and Rubella, respectively).
+
 **Measles**
 
 **Mumps**
