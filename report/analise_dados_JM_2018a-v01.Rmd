@@ -145,7 +145,7 @@ copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine
 When comparing the two tested vaccine groups, there is also a significant difference
 (Games-Howell test, p = `r gh.mumps.mono.p[3]`),
 indicating an average decrease of
-0.1945
+`r abs(gh.mumps.mono$intermediate$posthoc["final batch-final bulk", 1])`
 Copies/PCR (in log10) in the final batch preparation compared to the final bulk preparation.
 
 **Rubella**
