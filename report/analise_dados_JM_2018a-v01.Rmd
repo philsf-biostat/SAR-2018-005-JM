@@ -109,12 +109,13 @@ The p-values presented correspond to Welch-ANOVA tests comparing different vacci
 
 ## Evaluation of monoplex and biplex assays
 
-As expected, a major titer drop was observed with the three vaccine virus strains, between the three formulations (bulk, final bulk and final batch).
-This effect was observed when using both the Monoplex technique
+As expected, a significant titer change was observed between the three formulations (bulk, final bulk and final batch), with the three vaccine virus strains.
+This effect was observed when using both the Monoplex assay
 <!-- (p = `r welch.aov.measles.mono.p`, p = `r welch.aov.mumps.mono.p` and p = `r welch.aov.rubella.mono.p` for Measles, Mumps and Rubella, respectively), -->
-and the Biplex technique
+and the Biplex assay
 <!-- (p = `r welch.aov.measles.bi.p`, p = `r welch.aov.mumps.m.bi.p`, p = `r welch.aov.mumps.r.bi.p`,  and p = `r welch.aov.rubella.bi.p` for Measles, Mumps coupled with Measles, Mumps coupled with Rubella and Rubella, respectively). -->
 (table 6).
+Pairwise post-tests confirm a major titer drop can be consistently detected from the initial bulk formulation the next processing stages in all scenarios evaluated, as described below.
 
 ![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
