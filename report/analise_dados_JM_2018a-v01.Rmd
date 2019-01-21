@@ -157,9 +157,9 @@ When comparing the two tested vaccine groups (final bulk and final batch), there
 the monoplex assay, nor in the biplex mixture with Mumps virus
 (Games-Howell test, p = `r gh.rubella.mono.p[3]` and  p = `r gh.rubella.bi.p[3]`, respectively).
 
-![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
+![**Figure 2**: Viral titers observed in monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
-![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
+![**Figure 3**: Viral titers observed in biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
 
 ## Performance comparison between monoplex and biplex assays
 
