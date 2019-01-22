@@ -100,6 +100,7 @@ Figure 2 shows the results for the Monoplex assay and Figure 3 shows the mixture
 Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
 method.
 The p-values presented correspond to Welch-ANOVA tests comparing different vaccine formulation stages, per Virus and qPCR mixture.
+Monovalent Bulk indicated in both Mumps Biplex mixtures originate from the same experiment.
 
 **Measles**
 
@@ -119,6 +120,7 @@ The Mumps virus Monoplex assay had significant titer drops from the bulk to both
 In both Mumps Biplex mixtures tested, there were significant drops in viral titer from the bulk to other formulations
 (Games-Howell test, p = 0.00067 and p = 0.00468 for Measles mixture,
 and p = 0.00025 and p = 0.00006 for Rubella mixture).
+These two biplex mixtures were compared to a single Monovalent Bulk experiment (table 6 and figure 3).
 
 There was an average decrease of
 0.1945
