@@ -4,13 +4,13 @@ Analysis of vaccine potency by monoplex and biplex qPRC assay
 
 ## Análises realizadas
 
-1. xxx ([Planejamento][proj-xxx])
-2. yyy ([Planejamento][proj-yyy])
-3. zzz ([Planejamento][proj-zzz])
+1. Monoplex Evaluation ([Planejamento][proj-monoplex])
+2. Biplex Evaluation ([Planejamento][proj-biplex])
+3. Comparison Monoplex x Biplex ([Planejamento][proj-monobi-comp])
 
-[proj-xxx]: https://github.com/philsf-biostat/analise_dados_JM_2018a/projects/xxx
-[proj-yyy]: https://github.com/philsf-biostat/analise_dados_JM_2018a/projects/yyy
-[proj-zzz]: https://github.com/philsf-biostat/analise_dados_JM_2018a/projects/zzz
+[proj-monoplex]: https://github.com/philsf-biostat/analise_dados_JM_2018a/projects/2
+[proj-biplex]: https://github.com/philsf-biostat/analise_dados_JM_2018a/projects/3
+[proj-monobi-comp]: https://github.com/philsf-biostat/analise_dados_JM_2018a/projects/4
 
 ## Relatório da análise de dados
 
