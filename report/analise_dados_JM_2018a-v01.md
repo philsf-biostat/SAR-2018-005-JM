@@ -76,12 +76,15 @@ For simplicity sake these experiments were analyzed with the same methodology as
 
 As expected, a significant titer change was observed between the three formulations (bulk, final bulk and final batch), with the three vaccine virus strains.
 This effect was observed when using both the Monoplex assay
-<!-- (p = < 0.00001, p = < 0.00001 and p = 0.00003 for Measles, Mumps and Rubella, respectively), -->
 and the Biplex assay
-<!-- (p = 0.00036, p = 0.00057, p = 0.00007,  and p = 0.00097 for Measles, Mumps coupled with Measles, Mumps coupled with Rubella and Rubella, respectively). -->
 (table 6).
 Pairwise post-tests confirm a major titer drop can be consistently detected from the initial bulk formulation the next processing stages in all scenarios evaluated, as described below.
 Figure 2 shows the results for the Monoplex assay and Figure 3 shows the mixtures tested in the Biplex assay.
+
+<!-- monoplex -->
+<!-- (p = < 0.00001, p = < 0.00001 and p = 0.00003 for Measles, Mumps and Rubella, respectively), -->
+<!-- biplex -->
+<!-- (p = 0.00036, p = 0.00057, p = 0.00007,  and p = 0.00097 for Measles, Mumps coupled with Measles, Mumps coupled with Rubella and Rubella, respectively). -->
 
 
 | qPCR Mixture  | Virus Target | Monovalent Bulk | Final Vaccine Bulk | Final Vaccine Batch |     p     |

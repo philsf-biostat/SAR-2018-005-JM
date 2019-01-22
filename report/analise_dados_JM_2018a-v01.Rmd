@@ -103,12 +103,15 @@ For simplicity sake these experiments were analyzed with the same methodology as
 
 As expected, a significant titer change was observed between the three formulations (bulk, final bulk and final batch), with the three vaccine virus strains.
 This effect was observed when using both the Monoplex assay
-<!-- (p = `r welch.aov.measles.mono.p`, p = `r welch.aov.mumps.mono.p` and p = `r welch.aov.rubella.mono.p` for Measles, Mumps and Rubella, respectively), -->
 and the Biplex assay
-<!-- (p = `r welch.aov.measles.bi.p`, p = `r welch.aov.mumps.m.bi.p`, p = `r welch.aov.mumps.r.bi.p`,  and p = `r welch.aov.rubella.bi.p` for Measles, Mumps coupled with Measles, Mumps coupled with Rubella and Rubella, respectively). -->
 (table 6).
 Pairwise post-tests confirm a major titer drop can be consistently detected from the initial bulk formulation the next processing stages in all scenarios evaluated, as described below.
 Figure 2 shows the results for the Monoplex assay and Figure 3 shows the mixtures tested in the Biplex assay.
+
+<!-- monoplex -->
+<!-- (p = `r welch.aov.measles.mono.p`, p = `r welch.aov.mumps.mono.p` and p = `r welch.aov.rubella.mono.p` for Measles, Mumps and Rubella, respectively), -->
+<!-- biplex -->
+<!-- (p = `r welch.aov.measles.bi.p`, p = `r welch.aov.mumps.m.bi.p`, p = `r welch.aov.mumps.r.bi.p`,  and p = `r welch.aov.rubella.bi.p` for Measles, Mumps coupled with Measles, Mumps coupled with Rubella and Rubella, respectively). -->
 
 ```{r tabela geral}
 pander(results_table, split.table = Inf, digits = 3)
