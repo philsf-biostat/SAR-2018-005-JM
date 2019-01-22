@@ -58,21 +58,33 @@ toc-title: "Sumário"
 
 # Methods
 
-**Monoplex evaluation**
+**Evaluation of monoplex and biplex assays**
 
 In an initial exploratory analysis, the inspection of the residuals in a classical ANOVA showed the assumption of normality was not strongly violated (no significant values were obtained from the Shapiro-Wilk test, results not shown).
-The Levene test, however, indicated the assumption of homogeneity of variances was violated in most cases (p = 0.00002 for Measles, p = 0.25029 for Mumps and p = 0.00761 for Rubella).
+The Levene test, however, indicated the assumption of homogeneity of variances was violated in most monoplex samples tested (p = 0.00002 for Measles, p = 0.25029 for Mumps and p = 0.00761 for Rubella).
 We therefore opted to use the same procedure of the Welch correction in all analyses performed.
 In the same manner, the Games-Howell post-hoc test was employed to correct for multiple comparisons in the presence of heteroskedasticity.
 
-**Biplex evaluation**
+For the biplex samples, the Levene test did not show evidence of heterogeneity of variances for either Measles (p = 0.34015), Mumps (p = 0.10204) or Rubella (p = 0.13186).
+For simplicity sake these experiments were analyzed with the same methodology as described above.
 
-For the biplex samples, the Levene test did now show evidence of homogeneity of variances for either Measles (p = 0.34015), Mumps (p = 0.10204) or Rubella (p = 0.13186).
-For simplicity sake these data were analyzed with the same methodology as the monoplex samples (Welch ANOVA and Games-Howell post-test).
-
-**Monoplex x Biplex comparison**
+**Performance comparison between monoplex and biplex assays**
 
 # Results
+
+## Evaluation of monoplex and biplex assays
+
+As expected, a significant titer change was observed between the three formulations (bulk, final bulk and final batch), with the three vaccine virus strains.
+This effect was observed when using both the Monoplex assay
+and the Biplex assay
+(table 6).
+Pairwise post-tests confirm a major titer drop can be consistently detected from the initial bulk formulation the next processing stages in all scenarios evaluated, as described below.
+Figure 2 shows the results for the Monoplex assay and Figure 3 shows the mixtures tested in the Biplex assay.
+
+<!-- monoplex -->
+<!-- (p = < 0.00001, p = < 0.00001 and p = 0.00003 for Measles, Mumps and Rubella, respectively), -->
+<!-- biplex -->
+<!-- (p = 0.00036, p = 0.00057, p = 0.00007,  and p = 0.00097 for Measles, Mumps coupled with Measles, Mumps coupled with Rubella and Rubella, respectively). -->
 
 
 | qPCR Mixture  | Virus Target | Monovalent Bulk | Final Vaccine Bulk | Final Vaccine Batch |     p     |
@@ -89,78 +101,50 @@ Table: **Table 6** Potency of vaccine presentations quantified by monoplex and m
 method.
 The p-values presented correspond to Welch-ANOVA tests comparing different vaccine formulation stages, per Virus and qPCR mixture.
 
-## Monoplex evaluation
-
-![**Figure 2**: Comparison of viral titer by monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
-
 **Measles**
 
-There were significant differences between the vaccine groups considered
-(Welch ANOVA, p = < 0.00001).
-We observed an average decrease of
-2.0745121
-copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine
-(Games-Howell test, p < 0.00001),
-and an average decrease of
-1.8422536
-copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine
-(Games-Howell test, p < 0.00001).
-When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference
-(Games-Howell test, p = 0.09923).
+The Measles sample had significant titer drops from the bulk to both final bulk and final batch formulations
+in the monoplex assay
+(Games-Howell test, p < 0.00001 and p < 0.00001, respectively),
+and in the biplex assay
+(Games-Howell test, p = 0.00011 and p = 0.00131, respectively).
+When testing for differences between the final bulk and final batch, we found no significant difference in titers in either the
+monoplex (Games-Howell test, p = 0.09923) or the
+biplex assay (Games-Howell test, p = 0.12683).
 
 **Mumps**
 
-There were significant differences between the vaccine groups considered
-(Welch ANOVA, p < 0.00001).
-We observed an average decrease of
-1.2903863
-copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine
-(Games-Howell test, p < 0.00001),
-and an average decrease of
-1.4848485
-copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine
-(Games-Howell test, p < 0.00001).
-When comparing the two tested vaccine groups, there is also a significant difference
-(Games-Howell test, p = 0.02198),
-indicating an average decrease of
+The Mumps virus Monoplex assay had significant titer drops from the bulk to both final bulk and final batch formulations
+(Games-Howell test, p < 0.00001 and p < 0.00001, respectively).
+In both Mumps Biplex mixtures tested, there were significant drops in viral titer from the bulk to other formulations
+(Games-Howell test, p = 0.00067 and p = 0.00468 for Measles mixture,
+and p = 0.00025 and p = 0.00006 for Rubella mixture).
+
+There was an average decrease of
 0.1945
-Copies/PCR (in log10) in the final batch preparation compared to the final bulk preparation.
+log10 Copies/PCR in the final batch preparation when compared to the final bulk
+(Games-Howell test, p = 0.02198).
+Such difference in titer was not observed in the Biplex assay for either
+Measles mixture (Games-Howell test, p = 0.58129)
+or the for
+Rubella mixture (Games-Howell test, p = 0.01966).
 
 **Rubella**
 
-There were significant differences between the vaccine groups considered
-(Welch ANOVA, p = 0.00003).
-We observed an average decrease of
-1.3083
-copies/PCR (log10) in final vaccine bulk, when compared to the bulk vaccine
-(Games-Howell test, p = 0.00002),
-and an average decrease of
-1.0209
-copies/PCR (log10) in final vaccine batch, when compared to the bulk vaccine
-(Games-Howell test, p = 0.00035).
-When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference
-(Games-Howell test, p = 0.06272).
+The Rubella sample had significant titer drops from the bulk to both final bulk and final batch formulations
+in the Monoplex assay
+(Games-Howell test, p = < 0.00001 and p = 0.00017, respectively),
+and in the Biplex assay
+(Games-Howell test, p = 0.00099 and p = 0.00361, respectively).
+When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference in either
+the monoplex assay, nor in the biplex mixture with Mumps virus
+(Games-Howell test, p = 0.06272 and  p = 0.25792, respectively).
 
-## Biplex evaluation
+![**Figure 2**: Viral titers observed in monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
-![**Figure 3**: Comparison of viral titer by biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
+![**Figure 3**: Viral titers observed in biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
 
-As expected a major drop was observed with the three vaccine virus strains, between the three formulations (p = 0.00036, p = 0.00036 and p = 0.00097 for Measles, Mumps and Rubella, respectively).
-
-**Measles**
-
-The Measles sample had significant titer drops from the bulk to both final bulk and final batch formulations (Games-Howell test p = 0.00011 and p = 0.00131, respectively).
-When testing for differences final bulk and final batch, we found no significant difference in titers (p = 0.12683).
-
-**Mumps**
-
-In both Mumps mixtures tested (mixed with Measles and with Rubella), there were significant drops in viral titer from the bulk to other formulations (p = 0.00067 and p = 0.00468 for Measles, and p = 0.00025 and p = 0.00006 for Rubella).
-Mean titer was also not different in both mixtures (p = 0.58129 for Measles mixture and p = 0.01966 for Rubella mixture).
-
-**Rubella**
-
-Rubella was tested in a mixture with Mumps, where there was significant titer drops frin the bulk to the two other formulations (p = 0.00099 and p = 0.00361, respectively).
-No significant difference was detected between the final bulk and final batch formulations (p = 0.25792).
+## Performance comparison between monoplex and biplex assays
 
 <!-- # Exceções e Desvios do teste -->
 
