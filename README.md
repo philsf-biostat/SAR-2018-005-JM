@@ -16,7 +16,7 @@ Analysis of vaccine potency by monoplex and biplex qPRC assay
 
 [Ver as etapas desta análise][releases].
 
-**Versão 01 - xxx** - [Em elaboração][milestone-prequal].
+**Versão 01 - Relatório de análise para manuscrito** - [Em elaboração][milestone-prequal].
 
 [Planejamento][v01-project].
 
@@ -31,7 +31,7 @@ Analysis of vaccine potency by monoplex and biplex qPRC assay
 <!-- - Download -->
 
 [releases]: https://github.com/philsf-biostat/analise_dados_JM_2018a/releases/
-[milestone-prequal]: https://github.com/philsf-biostat/analise_dados_JM_2018a/milestone/xxx
+[milestone-prequal]: https://github.com/philsf-biostat/analise_dados_JM_2018a/milestone/1
 [reportviz-v01]: report/analise_dados_JM_2018a-v01.md
 [docx-v01]: report/analise_dados_JM_2018a-v01.docx?raw=true
 [v01-project]: https://github.com/philsf-biostat/analise_dados_JM_2018a/projects/xxx
