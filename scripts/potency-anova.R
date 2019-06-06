@@ -129,6 +129,9 @@ welch.aov.mumps.1_2.p <- pval(welch.aov.mumps.1_2$p.value)
 welch.aov.rubella.1_2.p <- pval(welch.aov.rubella.1_2$p.value)
 
 # games-howell post-test
+gh.measles.1_2 <- with(virs.1_2[Virus == "Measles"], userfriendlyscience::oneway(Quantity, Assay, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+gh.mumps.1_2 <- with(virs.1_2[Virus == "Mumps"], userfriendlyscience::oneway(Quantity, Assay, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+gh.rubella.1_2 <- with(virs.1_2[Virus == "Rubella"], userfriendlyscience::oneway(Quantity, Assay, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
 
 # obsolete ----------------------------------------------------------------
 
