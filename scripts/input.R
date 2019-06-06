@@ -43,3 +43,7 @@ rubella.bi$Virus <- "Rubella"
 virs.bi <- rbind(mumps.m.bi, mumps.r.bi, measles.bi, rubella.bi)
 rm(mumps.m.bi, mumps.r.bi, measles.bi, rubella.bi)
 virs.bi$Assay <- "Biplex"
+
+# temp dataset with both Assays 
+virs.1_2 <- rbind(virs.mono, virs.bi[, .(Sample, Quantity, Virus, Assay)])
+virs.1_2$Assay <- factor(virs.1_2$Assay) # assay as factor
