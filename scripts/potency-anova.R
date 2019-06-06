@@ -117,6 +117,10 @@ results_table$p[4:7] <- c(
 
 # Mono x Bi ---------------------------------------------------------------
 
+virs.1_2 <- rbind(virs.mono, virs.bi[, .(Sample, Quantity, Virus, Assay)])
+welch.aov.measles.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Measles"])
+welch.aov.mumps.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Mumps"])
+welch.aov.rubella.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Rubella"])
 
 # obsolete ----------------------------------------------------------------
 
