@@ -117,13 +117,18 @@ results_table$p[4:7] <- c(
 
 # Mono x Bi ---------------------------------------------------------------
 
+# Data
 virs.1_2 <- rbind(virs.mono, virs.bi[, .(Sample, Quantity, Virus, Assay)])
+
+# Welch ANOVA
 welch.aov.measles.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Measles"])
 welch.aov.mumps.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Mumps"])
 welch.aov.rubella.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Rubella"])
 welch.aov.measles.1_2.p <- pval(welch.aov.measles.1_2$p.value)
 welch.aov.mumps.1_2.p <- pval(welch.aov.mumps.1_2$p.value)
 welch.aov.rubella.1_2.p <- pval(welch.aov.rubella.1_2$p.value)
+
+# games-howell post-test
 
 # obsolete ----------------------------------------------------------------
 
