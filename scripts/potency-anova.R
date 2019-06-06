@@ -115,6 +115,9 @@ results_table$p[4:7] <- c(
   welch.aov.rubella.bi.p
 )
 
+# Mono x Bi ---------------------------------------------------------------
+
+
 # obsolete ----------------------------------------------------------------
 
 # anova.mumps <- aov(data = virs.mono[Virus == "Mumps"], Quantity ~ Sample)
