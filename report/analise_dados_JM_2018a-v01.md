@@ -155,6 +155,8 @@ the monoplex assay, nor in the biplex mixture with Mumps virus
 |    Mumps     |     8.314      |    8.285     | 0.88968 |
 |   Rubella    |     4.607      |    5.116     | 0.08458 |
 
+Table: **Table 7** Comparison of vaccine potency by qPCR assay method.
+The p-values presented correspond to Welch-ANOVA tests comparing the monoplex assays with the multiplex assays, per Virus.
 
 <!-- # Exceções e Desvios do teste -->
 
