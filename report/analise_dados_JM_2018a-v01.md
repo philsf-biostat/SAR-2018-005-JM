@@ -148,6 +148,14 @@ the monoplex assay, nor in the biplex mixture with Mumps virus
 
 ## Performance comparison between monoplex and biplex assays
 
+
+| Virus Target | Monoplex Assay | Biplex Assay |    p    |
+|:------------:|:--------------:|:------------:|:-------:|
+|   Measles    |     7.504      |    7.229     | 0.44265 |
+|    Mumps     |     8.314      |    8.285     | 0.88968 |
+|   Rubella    |     4.607      |    5.116     | 0.08458 |
+
+
 <!-- # Exceções e Desvios do teste -->
 
 # Conclusions

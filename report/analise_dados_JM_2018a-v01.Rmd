@@ -168,6 +168,10 @@ the monoplex assay, nor in the biplex mixture with Mumps virus
 
 ## Performance comparison between monoplex and biplex assays
 
+```{r mono x bi}
+pander(results_table.1_2)
+```
+
 <!-- # Exceções e Desvios do teste -->
 
 # Conclusions
