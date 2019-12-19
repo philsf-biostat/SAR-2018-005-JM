@@ -1,7 +1,7 @@
 ---
 title: "Analysis of vaccine potency by monoplex and multiplex qPRC assay"
-author: '**De:** Felipe Figueiredo **Para:** Gisela Trindade'
-date: '**Data: ** dd/mm/aaaa'
+author: '**De:** Felipe Figueiredo **Para:** Jéssica Malheiros'
+date: '**Data: ** 19/12/2019'
 output:
   html_document:
     fig_caption: yes
