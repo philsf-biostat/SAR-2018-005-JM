@@ -57,7 +57,7 @@ results_table$p <- c(
   welch.aov.rubella.mono.p
   )
 
-# Biplex ------------------------------------------------------------------
+# Multiplex ------------------------------------------------------------------
 
 # Levene
 lev.measles.bi <- leveneTest(Quantity ~ Sample, center = mean, data = virs.bi[Virus == "Measles"]) # Measles
@@ -140,7 +140,7 @@ means.1_2 <- cbind(
 results_table.1_2 <- data.table(
   "Virus Target" = rep(NA, 3),
   "Monoplex Assay" = rep(as.numeric(NA), 3),
-  "Biplex Assay" = rep(as.numeric(NA), 3)
+  "Multiplex Assay" = rep(as.numeric(NA), 3)
 )
   
 # results_table.1_2$`qPCR Mixture` <- rep("Monoplex", 3)

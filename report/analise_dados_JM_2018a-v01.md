@@ -1,5 +1,5 @@
 ---
-title: "Analysis of vaccine potency by monoplex and biplex qPRC assay"
+title: "Analysis of vaccine potency by monoplex and multiplex qPRC assay"
 author: '**De:** Felipe Figueiredo **Para:** Gisela Trindade'
 date: '**Data: ** dd/mm/aaaa'
 output:
@@ -58,35 +58,35 @@ toc-title: "Sumário"
 
 # Methods
 
-**Evaluation of monoplex and biplex assays**
+**Evaluation of monoplex and multiplex assays**
 
 In an initial exploratory analysis, the inspection of the residuals in a classical ANOVA showed the assumption of normality was not strongly violated (no significant values were obtained from the Shapiro-Wilk test, results not shown).
 The Levene test, however, indicated the assumption of homogeneity of variances was violated in most monoplex samples tested (p = 0.00002 for Measles, p = 0.25029 for Mumps and p = 0.00761 for Rubella).
 We therefore opted to use the same procedure of the Welch correction in all analyses performed.
 In the same manner, the Games-Howell post-hoc test was employed to correct for multiple comparisons in the presence of heteroskedasticity.
 
-For the biplex samples, the Levene test did not show evidence of heterogeneity of variances for either Measles (p = 0.34015), Mumps (p = 0.10204) or Rubella (p = 0.13186).
+For the multiplex samples, the Levene test did not show evidence of heterogeneity of variances for either Measles (p = 0.34015), Mumps (p = 0.10204) or Rubella (p = 0.13186).
 For simplicity sake these experiments were analyzed with the same methodology as described above.
 
-**Performance comparison between monoplex and biplex assays**
+**Performance comparison between monoplex and multiplex assays**
 
 As well as vertical comparisons between different per-virus formulations (Table 6), we performed a global horizontal comparizon between the two mixtures tested in this study (Table 7) using the same methodology described above.
 This was decided in order to allow for a reference of comparison between all results in this study.
 
 # Results
 
-## Evaluation of monoplex and biplex assays
+## Evaluation of monoplex and multiplex assays
 
 As expected, a significant titer change was observed between the three formulations (bulk, final bulk and final batch), with the three vaccine virus strains.
 This effect was observed when using both the Monoplex assay
-and the Biplex assay
+and the Multiplex assay
 (table 6).
 Pairwise post-tests confirm a major titer drop can be consistently detected from the initial bulk formulation the next processing stages in all scenarios evaluated, as described below.
-Figure 2 shows the results for the Monoplex assay and Figure 3 shows the mixtures tested in the Biplex assay.
+Figure 2 shows the results for the Monoplex assay and Figure 3 shows the mixtures tested in the Multiplex assay.
 
 <!-- monoplex -->
 <!-- (p = < 0.00001, p = < 0.00001 and p = 0.00003 for Measles, Mumps and Rubella, respectively), -->
-<!-- biplex -->
+<!-- multiplex -->
 <!-- (p = 0.00036, p = 0.00057, p = 0.00007,  and p = 0.00097 for Measles, Mumps coupled with Measles, Mumps coupled with Rubella and Rubella, respectively). -->
 
 
@@ -103,33 +103,33 @@ Figure 2 shows the results for the Monoplex assay and Figure 3 shows the mixture
 Table: **Table 6** Potency of vaccine presentations quantified by monoplex and multiplex qPCR
 method.
 The p-values presented correspond to Welch-ANOVA tests comparing different vaccine formulation stages, per Virus and qPCR mixture.
-Monovalent Bulk indicated in both Mumps Biplex mixtures originate from the same experiment.
+Monovalent Bulk indicated in both Mumps Multiplex mixtures originate from the same experiment.
 
 **Measles**
 
 The Measles sample had significant titer drops from the bulk to both final bulk and final batch formulations
 in the monoplex assay
 (Games-Howell test, p < 0.00001 and p < 0.00001, respectively),
-and in the biplex assay
+and in the multiplex assay
 (Games-Howell test, p = 0.00011 and p = 0.00131, respectively).
 When testing for differences between the final bulk and final batch, we found no significant difference in titers in either the
 monoplex (Games-Howell test, p = 0.09923) or the
-biplex assay (Games-Howell test, p = 0.12683).
+multiplex assay (Games-Howell test, p = 0.12683).
 
 **Mumps**
 
 The Mumps virus Monoplex assay had significant titer drops from the bulk to both final bulk and final batch formulations
 (Games-Howell test, p < 0.00001 and p < 0.00001, respectively).
-In both Mumps Biplex mixtures tested, there were significant drops in viral titer from the bulk to other formulations
+In both Mumps Multiplex mixtures tested, there were significant drops in viral titer from the bulk to other formulations
 (Games-Howell test, p = 0.00067 and p = 0.00468 for Measles mixture,
 and p = 0.00025 and p = 0.00006 for Rubella mixture).
-These two biplex mixtures were compared to a single Monovalent Bulk experiment (table 6 and figure 3).
+These two multiplex mixtures were compared to a single Monovalent Bulk experiment (table 6 and figure 3).
 
 There was an average decrease of
 0.1945
 log10 Copies/PCR in the final batch preparation when compared to the final bulk
 (Games-Howell test, p = 0.02198).
-Such difference in titer was not observed in the Biplex assay for either
+Such difference in titer was not observed in the Multiplex assay for either
 Measles mixture (Games-Howell test, p = 0.58129)
 or the for
 Rubella mixture (Games-Howell test, p = 0.01966).
@@ -139,34 +139,34 @@ Rubella mixture (Games-Howell test, p = 0.01966).
 The Rubella sample had significant titer drops from the bulk to both final bulk and final batch formulations
 in the Monoplex assay
 (Games-Howell test, p = < 0.00001 and p = 0.00017, respectively),
-and in the Biplex assay
+and in the Multiplex assay
 (Games-Howell test, p = 0.00099 and p = 0.00361, respectively).
 When comparing the two tested vaccine groups (final bulk and final batch), there was no significant difference in either
-the monoplex assay, nor in the biplex mixture with Mumps virus
+the monoplex assay, nor in the multiplex mixture with Mumps virus
 (Games-Howell test, p = 0.06272 and  p = 0.25792, respectively).
 
 ![**Figure 2**: Viral titers observed in monoplex qPCR in the different vaccine formulations.](../figures/monoplex.png)
 
-![**Figure 3**: Viral titers observed in biplex qPCR mixtures in the different vaccine formulations.](../figures/biplex.png)
+![**Figure 3**: Viral titers observed in multiplex qPCR mixtures in the different vaccine formulations.](../figures/multiplex.png)
 
-## Performance comparison between monoplex and biplex assays
+## Performance comparison between monoplex and multiplex assays
 
 
-| Virus Target | Monoplex Assay | Biplex Assay |    p    |
-|:------------:|:--------------:|:------------:|:-------:|
-|   Measles    |     7.504      |    7.229     | 0.44265 |
-|    Mumps     |     8.314      |    8.285     | 0.88968 |
-|   Rubella    |     4.607      |    5.116     | 0.08458 |
+| Virus Target | Monoplex Assay | Multiplex Assay |    p    |
+|:------------:|:--------------:|:---------------:|:-------:|
+|   Measles    |     7.504      |      7.229      | 0.44265 |
+|    Mumps     |     8.314      |      8.285      | 0.88968 |
+|   Rubella    |     4.607      |      5.116      | 0.08458 |
 
 Table: **Table 7** Comparison of vaccine potency by qPCR assay method.
 The p-values presented correspond to Welch-ANOVA tests comparing the monoplex assays with the multiplex assays, per Virus.
 
-When comparing the performance of the monoplex and biplex mixtures (as seen in Table 7) there were no significant evidence of diference in mean titers for
+When comparing the performance of the monoplex and multiplex mixtures (as seen in Table 7) there were no significant evidence of diference in mean titers for
 the measles virus (Welch-ANOVA p = 0.44265),
 the mumps virus (Welch-ANOVA p = 0.88968) and
 the rubella virus  (Welch-ANOVA p = 0.08458),
 so no post-hoc tests were performed.
-This result indicates tha both the monoplex and biplex PCR mixtures may have similar performances when used to test for vaccine formulation potency.
+This result indicates tha both the monoplex and multiplex PCR mixtures may have similar performances when used to test for vaccine formulation potency.
 If larger experiments confirm this initial result, the choice on what mixture to use could be then performed solely on laboratory logistics issues, as oposed to experimental performance issues.
 
 <!-- # Exceções e Desvios do teste -->
