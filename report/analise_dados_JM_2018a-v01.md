@@ -70,6 +70,9 @@ For simplicity sake these experiments were analyzed with the same methodology as
 
 **Performance comparison between monoplex and biplex assays**
 
+As well as vertical comparisons between different per-virus formulations (Table 6), we performed a global horizontal comparizon between the two mixtures tested in this study (Table 7) using the same methodology described above.
+This was decided in order to allow for a reference of comparison between all results in this study.
+
 # Results
 
 ## Evaluation of monoplex and biplex assays
@@ -157,6 +160,13 @@ the monoplex assay, nor in the biplex mixture with Mumps virus
 
 Table: **Table 7** Comparison of vaccine potency by qPCR assay method.
 The p-values presented correspond to Welch-ANOVA tests comparing the monoplex assays with the multiplex assays, per Virus.
+
+When comparing the performance of the monoplex and biplex mixtures (as seen in Table 7) there were no significant evidence of diference in mean titers for
+the measles virus (Welch-ANOVA p = 0.44265),
+the mumps virus (Welch-ANOVA p = 0.88968) and
+the rubella virus  (Welch-ANOVA p = 0.08458).
+This result indicates tha both the monoplex and biplex PCR mixtures may have similar performances when used to test for vaccine formulation potency.
+If larger experiments confirm this initial result, the choice on what mixture to use could be then performed solely on laboratory logistics issues, as oposed to experimental performance issues.
 
 <!-- # Exceções e Desvios do teste -->
 
