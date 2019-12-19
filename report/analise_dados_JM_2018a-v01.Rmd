@@ -181,7 +181,8 @@ The p-values presented correspond to Welch-ANOVA tests comparing the monoplex as
 When comparing the performance of the monoplex and biplex mixtures (as seen in Table 7) there were no significant evidence of diference in mean titers for
 the measles virus (Welch-ANOVA p = `r welch.aov.measles.1_2.p`),
 the mumps virus (Welch-ANOVA p = `r welch.aov.mumps.1_2.p`) and
-the rubella virus  (Welch-ANOVA p = `r welch.aov.rubella.1_2.p`).
+the rubella virus  (Welch-ANOVA p = `r welch.aov.rubella.1_2.p`),
+so no post-hoc tests were performed.
 This result indicates tha both the monoplex and biplex PCR mixtures may have similar performances when used to test for vaccine formulation potency.
 If larger experiments confirm this initial result, the choice on what mixture to use could be then performed solely on laboratory logistics issues, as oposed to experimental performance issues.
 
