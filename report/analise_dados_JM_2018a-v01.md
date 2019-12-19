@@ -1,7 +1,7 @@
 ---
 title: "Analysis of vaccine potency by monoplex and multiplex qPRC assay"
-author: '**De:** Felipe Figueiredo **Para:** Gisela Trindade'
-date: '**Data: ** dd/mm/aaaa'
+author: '**De:** Felipe Figueiredo **Para:** Jéssica Malheiros'
+date: '**Data: ** 19/12/2019'
 output:
   html_document:
     fig_caption: yes
@@ -70,7 +70,7 @@ For simplicity sake these experiments were analyzed with the same methodology as
 
 **Performance comparison between monoplex and multiplex assays**
 
-As well as vertical comparisons between different per-virus formulations (Table 6), we performed a global horizontal comparizon between the two mixtures tested in this study (Table 7) using the same methodology described above.
+As well as vertical comparisons between different per-virus formulations (Table 6), we performed a global horizontal comparison between the two mixtures tested in this study (Table 7) using the same methodology described above.
 This was decided in order to allow for a reference of comparison between all results in this study.
 
 # Results
@@ -161,13 +161,13 @@ the monoplex assay, nor in the multiplex mixture with Mumps virus
 Table: **Table 7** Comparison of vaccine potency by qPCR assay method.
 The p-values presented correspond to Welch-ANOVA tests comparing the monoplex assays with the multiplex assays, per Virus.
 
-When comparing the performance of the monoplex and multiplex mixtures (as seen in Table 7) there were no significant evidence of diference in mean titers for
+When comparing the performance of the monoplex and multiplex mixtures (as seen in Table 7) there were no significant evidence of difference in mean titers for
 the measles virus (Welch-ANOVA p = 0.44265),
 the mumps virus (Welch-ANOVA p = 0.88968) and
 the rubella virus  (Welch-ANOVA p = 0.08458),
 so no post-hoc tests were performed.
-This result indicates tha both the monoplex and multiplex PCR mixtures may have similar performances when used to test for vaccine formulation potency.
-If larger experiments confirm this initial result, the choice on what mixture to use could be then performed solely on laboratory logistics issues, as oposed to experimental performance issues.
+This result indicates that both the monoplex and multiplex PCR mixtures may have similar performances when used to test for vaccine formulation potency.
+If larger experiments confirm this initial result, the choice on what mixture to use could be then performed solely on laboratory logistics issues, as opposed to experimental performance issues.
 
 <!-- # Exceções e Desvios do teste -->
 
