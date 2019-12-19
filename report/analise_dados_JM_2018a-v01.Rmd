@@ -175,6 +175,13 @@ pander(results_table.1_2)
 Table: **Table 7** Comparison of vaccine potency by qPCR assay method.
 The p-values presented correspond to Welch-ANOVA tests comparing the monoplex assays with the multiplex assays, per Virus.
 
+When comparing the performance of the monoplex and biplex mixtures (as seen in Table 7) there were no significant evidence of diference in mean titers for
+the measles virus (Welch-ANOVA p = `r welch.aov.measles.1_2.p`),
+the mumps virus (Welch-ANOVA p = `r welch.aov.mumps.1_2.p`) and
+the rubella virus  (Welch-ANOVA p = `r welch.aov.rubella.1_2.p`).
+This result indicates tha both the monoplex and biplex PCR mixtures may have similar performances when used to test for vaccine formulation potency.
+If larger experiments confirm this initial result, the choice on what mixture to use could be then performed solely on laboratory logistics issues, as oposed to experimental performance issues.
+
 <!-- # Exceções e Desvios do teste -->
 
 # Conclusions
