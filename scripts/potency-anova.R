@@ -115,6 +115,46 @@ results_table$p[4:7] <- c(
   welch.aov.rubella.bi.p
 )
 
+# Mono x Bi ---------------------------------------------------------------
+
+# Welch ANOVA
+welch.aov.measles.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Measles"])
+welch.aov.mumps.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Mumps"])
+welch.aov.rubella.1_2 <- oneway.test(Quantity ~ Assay, var.equal = F, data = virs.1_2[Virus == "Rubella"])
+welch.aov.measles.1_2.p <- pval(welch.aov.measles.1_2$p.value)
+welch.aov.mumps.1_2.p <- pval(welch.aov.mumps.1_2$p.value)
+welch.aov.rubella.1_2.p <- pval(welch.aov.rubella.1_2$p.value)
+
+# games-howell post-test
+gh.measles.1_2 <- with(virs.1_2[Virus == "Measles"], userfriendlyscience::oneway(Quantity, Assay, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+gh.mumps.1_2 <- with(virs.1_2[Virus == "Mumps"], userfriendlyscience::oneway(Quantity, Assay, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+gh.rubella.1_2 <- with(virs.1_2[Virus == "Rubella"], userfriendlyscience::oneway(Quantity, Assay, levene = T, corrections = T, posthoc = "games-howell", etasq = F, digits = 4)) # Measles
+
+means.1_2 <- cbind(
+  virs.1_2[Virus == "Measles", .("Measles" = mean(Quantity)), by = Assay],
+  virs.1_2[Virus == "Mumps", .("Mumps" = mean(Quantity)), by = Assay],
+  virs.1_2[Virus == "Rubella", .("Rubella" = mean(Quantity)), by = Assay]
+)
+
+# Final results table - creation
+results_table.1_2 <- data.table(
+  "Virus Target" = rep(NA, 3),
+  "Monoplex Assay" = rep(as.numeric(NA), 3),
+  "Biplex Assay" = rep(as.numeric(NA), 3)
+)
+  
+# results_table.1_2$`qPCR Mixture` <- rep("Monoplex", 3)
+results_table.1_2$`Virus Target` <- names(means.1_2)[c(2,4,6)]
+results_table.1_2[`Virus Target` == "Measles", 2:3 ] <- as.list(means.1_2[, Measles])
+results_table.1_2[`Virus Target` == "Mumps", 2:3 ] <- as.list(means.1_2[, Mumps])
+results_table.1_2[`Virus Target` == "Rubella", 2:3 ] <- as.list(means.1_2[, Rubella])
+
+results_table.1_2$p <- c(
+  welch.aov.measles.1_2.p,
+  welch.aov.mumps.1_2.p,
+  welch.aov.rubella.1_2.p
+)
+
 # obsolete ----------------------------------------------------------------
 
 # anova.mumps <- aov(data = virs.mono[Virus == "Mumps"], Quantity ~ Sample)
