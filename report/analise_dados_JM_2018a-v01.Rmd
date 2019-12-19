@@ -97,6 +97,9 @@ For simplicity sake these experiments were analyzed with the same methodology as
 
 **Performance comparison between monoplex and biplex assays**
 
+As well as vertical comparisons between different per-virus formulations (Table 6), we performed a global horizontal comparizon between the two mixtures tested in this study (Table 7) using the same methodology described above.
+This was decided in order to allow for a reference of comparison between all results in this study.
+
 # Results
 
 ## Evaluation of monoplex and biplex assays
