@@ -1,6 +1,6 @@
-# Análise de Dados artigo com Jéssica Malheiros (Bio-Manguinhos/Fiocruz, 2018)
+# Analysis of vaccine potency by monoplex and biplex qPRC assay
 
-Analysis of vaccine potency by monoplex and biplex qPRC assay
+Análise de Dados artigo com Jéssica Malheiros (Bio-Manguinhos/Fiocruz, 2018)
 
 ## Análises realizadas
 
